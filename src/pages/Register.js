@@ -53,49 +53,58 @@ const Register = () => {
       <Stack spacing={3}>
         <TextField
           type="text"
-          placeholder="Full Name"
-          id="fullname"
+          placeholder="First Name"
+          id="firstname"
+          onChange={handleChange}
+        />
+        <TextField
+          type="text"
+          placeholder="MIddle Name"
+          id="middlename"
+          onChange={handleChange}
+        />
+        <TextField
+          type="text"
+          placeholder="Last Name"
+          id="lastname"
+          onChange={handleChange}
+        />
+        <TextField
+          type="text"
+          placeholder="Male, Female, Others"
+          id="gender"
+          onChange={handleChange}
+        />
+        <TextField
+          type="text"
+          placeholder="Nationality"
+          id="nationality"
           onChange={handleChange}
         />
         <TextField
           type="email"
-          placeholder="Email"
+          placeholder="Email Address"
           id="email"
           onChange={handleChange}
         />
         <TextField
-          type="number"
+          type="text"
           placeholder="Phone Number"
           id="phone"
           onChange={handleChange}
         />
         <TextField
           type="text"
-          placeholder="Country"
-          id="country"
+          placeholder="Address"
+          id="address"
           onChange={handleChange}
         />
         <TextField
           type="text"
-          placeholder="City"
-          id="city"
+          placeholder="Courses"
+          id="courses"
           onChange={handleChange}
         />
-        <TextField
-          type="password"
-          placeholder="Password"
-          id="password"
-          onChange={handleChange}
-        />
-      </Stack>
-
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{ my: 2 }}
-      >
-        <Checkbox name="remember" label="Remember me" />
       </Stack>
 
       <LoadingButton
