@@ -1,71 +1,91 @@
 import axios from "axios";
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // @mui
 import {
-  Link,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
   Stack,
-  IconButton,
-  InputAdornment,
   TextField,
   Checkbox,
 } from "@mui/material";
+import Button from "@mui/material/Button";
+
 import { LoadingButton } from "@mui/lab";
 // components
 
 // ----------------------------------------------------------------------
 const Register = () => {
-  //   const [credentials, setCredentials] = useState({
-  //     email: undefined,
-  //     password: undefined,
-  //   });
-  //   const [showPassword, setShowPassword] = useState(false);
+  const [file, setFile] = useState("");
+  const [info, setInfo] = useState({});
+  const [showModal, setShowModal] = useState(false); // State for showing the modal
+  const navigate = useNavigate();
+  const handleChange = (e) => {
+    setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
 
-  //   const { loading, error, dispatch } = useContext(AuthContext);
+  const handleClick = async (e) => {
+    e.preventDefault();
+    try {
+      // Send registration data to your API endpoint
+      await axios.post("http://localhost:4000/api/auth/register", info);
 
-  //   const navigate = useNavigate();
+      // Show the success modal
+      setShowModal(true);
 
-  //   const handleChange = (e) => {
-  //     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
-  //   };
+      // Clear the form fields or perform any other necessary actions
+    } catch (err) {
+      // Handle registration error
+      console.error("Registration failed:", err);
+      // You can display an error message to the user if needed
+    }
+  };
 
-  //   const handleClick = async (e) => {
-  //     e.preventDefault();
-  //     dispatch({ type: "LOGIN_START" });
-  //     try {
-  //       const res = await axios.post(
-  //         "https://adzenon-8a494e17f9e2.herokuapp.com/api/auth/login",
-  //         credentials
-  //       );
-  //       if (res.data.isAdmin) {
-  //         dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
+  const handleCloseModal = () => {
+    setShowModal(false);
+    navigate("/"); // Navigate to the home page after closing the modal
+  };
 
-  //         navigate("/dashboard/app");
-  //       } else {
-  //         dispatch({
-  //           type: "LOGIN_FAILURE",
-  //           payload: { message: "You are not allowed!" },
-  //         });
-  //       }
-  //     } catch (err) {
-  //       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
-  //     }
-  //   };
   return (
     <>
       <Stack spacing={3}>
-        <TextField type="text" placeholder="email address" id="email" />
-        <TextField type="text" placeholder="name" id="email" />
-        <TextField type="text" placeholder="phone number" id="email" />
-        <TextField type="text" placeholder="Address" id="email" />
-        <TextField type="text" placeholder="State" id="email" />
-        <TextField type="text" placeholder="Interest" id="email" />
-
         <TextField
-          label="Password"
+          type="text"
+          placeholder="Full Name"
+          id="fullname"
+          onChange={handleChange}
+        />
+        <TextField
+          type="email"
+          placeholder="Email"
+          id="email"
+          onChange={handleChange}
+        />
+        <TextField
+          type="number"
+          placeholder="Phone Number"
+          id="phone"
+          onChange={handleChange}
+        />
+        <TextField
+          type="text"
+          placeholder="Country"
+          id="country"
+          onChange={handleChange}
+        />
+        <TextField
+          type="text"
+          placeholder="City"
+          id="city"
+          onChange={handleChange}
+        />
+        <TextField
           type="password"
-          placeholder="password"
+          placeholder="Password"
           id="password"
+          onChange={handleChange}
         />
       </Stack>
 
@@ -83,9 +103,32 @@ const Register = () => {
         size="large"
         type="submit"
         style={{ backgroundColor: "red", color: "white" }}
+        onClick={handleClick}
       >
         Register
       </LoadingButton>
+
+      {/* Success Modal */}
+      <Dialog open={showModal} onClose={handleCloseModal}>
+        <DialogTitle>Registration Successful</DialogTitle>
+        <DialogContent>
+          Your registration was successful. Do you want to visit our website?
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseModal} color="primary">
+            No
+          </Button>
+          <Button
+            onClick={() => {
+              navigate("/");
+              handleCloseModal();
+            }}
+            color="primary"
+          >
+            <Link to="/">Yes</Link>
+          </Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 };
