@@ -200,18 +200,6 @@ const Register = () => {
           label="Mentorship"
         />
       </Stack>
-
-      <Typography variant="body2" sx={{ mt: 5 }}>
-        I hearby declare that the information provided in this form is accurate
-        and complete to the best of my knowledge.
-      </Typography>
-
-      <TextField
-        type="date"
-        placeholder="Date"
-        id="date"
-        onChange={handleChange}
-      />
       <Typography variant="body2" sx={{ mt: 5 }}>
         How do you want to take the class?
       </Typography>
@@ -231,6 +219,18 @@ const Register = () => {
         onChange={(e) =>
           handleChange({ target: { id: "class", value: "offline" } })
         }
+      />
+
+      <Typography variant="body2" sx={{ mt: 5, mb: 5 }}>
+        I hearby declare that the information provided in this form is accurate
+        and complete to the best of my knowledge.
+      </Typography>
+
+      <TextField
+        type="date"
+        placeholder="Date"
+        id="date"
+        onChange={handleChange}
       />
 
       <Typography variant="body2" sx={{ mb: 5 }}>
