@@ -114,7 +114,7 @@ const Register = () => {
         />
         <Typography variant="h6" gutterBottom>
           school of oil and gas and business courses, below is the list of
-          courses, please write out the one you intent taking
+          courses, please write out the one you intend taking
         </Typography>
         <Typography variant="body2" sx={{ mb: 5 }}>
           <ul>
