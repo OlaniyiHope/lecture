@@ -35,7 +35,10 @@ const Register = () => {
     e.preventDefault();
     try {
       // Send registration data to your API endpoint
-      await axios.post("http://localhost:4000/api/auth/register", info);
+      await axios.post(
+        "https://safeoil-1691d9bd24cd.herokuapp.com/api/auth/register",
+        info
+      );
 
       // Show the success modal
       setShowModal(true);
