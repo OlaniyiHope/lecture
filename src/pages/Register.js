@@ -201,7 +201,7 @@ const Register = () => {
         />
       </Stack>
 
-      <Typography variant="body2" sx={{ mb: 5 }}>
+      <Typography variant="body2" sx={{ mt: 5 }}>
         I hearby declare that the information provided in this form is accurate
         and complete to the best of my knowledge.
       </Typography>
@@ -212,7 +212,7 @@ const Register = () => {
         id="date"
         onChange={handleChange}
       />
-      <Typography variant="body2" sx={{ mb: 5 }}>
+      <Typography variant="body2" sx={{ mt: 5 }}>
         How do you want to take the class?
       </Typography>
 
