@@ -10,6 +10,7 @@ import {
   Stack,
   TextField,
   Checkbox,
+  Typography,
 } from "@mui/material";
 import Button from "@mui/material/Button";
 
@@ -54,6 +55,9 @@ const Register = () => {
   return (
     <>
       <Stack spacing={3}>
+        <Typography variant="body2" sx={{ mb: 5 }}>
+          Personal Information
+        </Typography>
         <TextField
           type="text"
           placeholder="First Name"
@@ -72,12 +76,18 @@ const Register = () => {
           id="lastname"
           onChange={handleChange}
         />
+        <Typography variant="body2" sx={{ mb: 5 }}>
+          Gender
+        </Typography>
         <TextField
           type="text"
           placeholder="Male, Female, Others"
           id="gender"
           onChange={handleChange}
         />
+        <Typography variant="body2" sx={{ mb: 5 }}>
+          Others
+        </Typography>
         <TextField
           type="text"
           placeholder="Nationality"
@@ -102,11 +112,24 @@ const Register = () => {
           id="address"
           onChange={handleChange}
         />
+        <Typography variant="h6" gutterBottom>
+          school of oil and gas and business courses, below is the list of
+          courses, please write out the one you intent taking
+        </Typography>
+        <Typography variant="body2" sx={{ mb: 5 }}>
+          <ul>
+            <li>1. LPG(Cooking gas sales and management)</li>
+            <li>2. Construction and installation of LPG storage tank</li>
+            <li>3. Oil and Gas investment</li>
+            <li>4. Mentorship</li>
+          </ul>
+        </Typography>
         <TextField
           type="text"
           placeholder="Courses"
           id="courses"
           onChange={handleChange}
+          style={{ marginBottom: "26px" }}
         />
       </Stack>
 

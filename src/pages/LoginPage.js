@@ -4,6 +4,7 @@ import { Container, Typography, Divider, Stack, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
+import logs from "./on.png";
 
 // ----------------------------------------------------------------------
 
@@ -39,26 +40,20 @@ const LoginPage = () => {
   return (
     <>
       <StyledRoot>
-        <StyledSection>
-          <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-            <img
-              alt="logo"
-              style={{
-                width: "300px",
-              }}
-            />
-          </Typography>
-        </StyledSection>
-
         <Container maxWidth="sm">
           <StyledContent>
-            <Typography variant="h4" gutterBottom>
-              Register for your oil and gas class
+            <img
+              alt="logo"
+              src={logs}
+              style={{ width: "50px", margin: "auto", marginBottom: "10px" }}
+            />
+            <Typography variant="h6" gutterBottom>
+              Oil and gas program enrolment form
             </Typography>
 
             <Typography variant="body2" sx={{ mb: 5 }}>
-              Don’t have an account? {""}
-              <Link to="/register">Get started</Link>
+              Please complete the following form to enroll in our Oil and Gas
+              program. All fields are mandatory
             </Typography>
 
             <Register />
