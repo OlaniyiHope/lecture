@@ -232,13 +232,13 @@ const Register = () => {
       <Typography variant="h6" gutterBottom style={{ color: "red" }}>
         Company account details
       </Typography>
-      <Typography variant="h6" gutterBottom>
+      <Typography gutterBottom>
         Account name: 24/7 safe oil & gas global limited
       </Typography>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="p" gutterBottom>
         Bank: zenith bank
       </Typography>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="p" gutterBottom>
         Account Number: 1017238268
       </Typography>
       {/* Success Modal */}
