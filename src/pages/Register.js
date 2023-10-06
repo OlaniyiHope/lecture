@@ -22,7 +22,9 @@ import { LoadingButton } from "@mui/lab";
 // ----------------------------------------------------------------------
 const Register = () => {
   const [file, setFile] = useState("");
-  const [info, setInfo] = useState({});
+  const [info, setInfo] = useState({
+    courses: [], // Initialize courses as an empty array
+  });
   const [showModal, setShowModal] = useState(false); // State for showing the modal
   const navigate = useNavigate();
   const handleChange = (e) => {
@@ -52,6 +54,18 @@ const Register = () => {
   const handleCloseModal = () => {
     setShowModal(false);
     navigate("/"); // Navigate to the home page after closing the modal
+  };
+
+  const handleCourseChange = (e) => {
+    const { id, value } = e.target;
+
+    // Check if the course is already in the array, if yes, remove it, else add it
+    setInfo((prev) => ({
+      ...prev,
+      courses: prev.courses.includes(value)
+        ? prev.courses.filter((course) => course !== value)
+        : [...prev.courses, value],
+    }));
   };
 
   return (
@@ -135,56 +149,55 @@ const Register = () => {
           onChange={handleChange}
         />
         <Typography variant="h6" gutterBottom>
-          school of oil and gas and business courses
+          School of oil and gas and business courses
         </Typography>
         <Typography variant="body2" sx={{ mb: 5 }}></Typography>
 
         <FormControlLabel
-          value="LPG(Cooking Gas) Sales and Management"
-          control={<Radio />}
+          control={
+            <Checkbox
+              checked={info.courses.includes(
+                "LPG(Cooking Gas) Sales and Management"
+              )}
+              onChange={handleCourseChange}
+              value="LPG(Cooking Gas) Sales and Management"
+            />
+          }
           label="LPG(Cooking Gas) Sales and Management"
-          onChange={(e) =>
-            handleChange({
-              target: {
-                id: "courses",
-                value: "LPG(Cooking Gas) Sales and Management",
-              },
-            })
-          }
         />
         <FormControlLabel
-          value="Construction and Installation of LPG (cooking gas)"
-          control={<Radio />}
+          control={
+            <Checkbox
+              checked={info.courses.includes(
+                "Construction and Installation of LPG (cooking gas)"
+              )}
+              onChange={handleCourseChange}
+              value="Construction and Installation of LPG (cooking gas)"
+            />
+          }
           label="Construction and Installation of LPG (cooking gas)"
-          onChange={(e) =>
-            handleChange({
-              target: {
-                id: "courses",
-                value: "Construction and Installation of LPG (cooking gas)",
-              },
-            })
-          }
         />
         <FormControlLabel
-          value="oil and gas investment/Financial freedom"
-          control={<Radio />}
-          label="oil and gas investment/Financial freedom"
-          onChange={(e) =>
-            handleChange({
-              target: {
-                id: "courses",
-                value: "oil and gas investment/Financial freedom",
-              },
-            })
+          control={
+            <Checkbox
+              checked={info.courses.includes(
+                "Oil and Gas Investment/Financial Freedom"
+              )}
+              onChange={handleCourseChange}
+              value="Oil and Gas Investment/Financial Freedom"
+            />
           }
+          label="Oil and Gas Investment/Financial Freedom"
         />
         <FormControlLabel
-          value="Mentorship"
-          control={<Radio />}
+          control={
+            <Checkbox
+              checked={info.courses.includes("Mentorship")}
+              onChange={handleCourseChange}
+              value="Mentorship"
+            />
+          }
           label="Mentorship"
-          onChange={(e) =>
-            handleChange({ target: { id: "courses", value: "Mentorship" } })
-          }
         />
       </Stack>
 
