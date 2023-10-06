@@ -135,23 +135,56 @@ const Register = () => {
           onChange={handleChange}
         />
         <Typography variant="h6" gutterBottom>
-          school of oil and gas and business courses, below is the list of
-          courses, please write out the one you intend taking
+          school of oil and gas and business courses
         </Typography>
-        <Typography variant="body2" sx={{ mb: 5 }}>
-          <ul>
-            <li>1. LPG(Cooking gas sales and management)</li>
-            <li>2. Construction and installation of LPG storage tank</li>
-            <li>3. Oil and Gas investment</li>
-            <li>4. Mentorship</li>
-          </ul>
-        </Typography>
-        <TextField
-          type="text"
-          placeholder="Courses"
-          id="courses"
-          onChange={handleChange}
-          style={{ marginBottom: "26px" }}
+        <Typography variant="body2" sx={{ mb: 5 }}></Typography>
+
+        <FormControlLabel
+          value="LPG(Cooking Gas) Sales and Management"
+          control={<Radio />}
+          label="LPG(Cooking Gas) Sales and Management"
+          onChange={(e) =>
+            handleChange({
+              target: {
+                id: "courses",
+                value: "LPG(Cooking Gas) Sales and Management",
+              },
+            })
+          }
+        />
+        <FormControlLabel
+          value="Construction and Installation of LPG (cooking gas)"
+          control={<Radio />}
+          label="Construction and Installation of LPG (cooking gas)"
+          onChange={(e) =>
+            handleChange({
+              target: {
+                id: "courses",
+                value: "Construction and Installation of LPG (cooking gas)",
+              },
+            })
+          }
+        />
+        <FormControlLabel
+          value="oil and gas investment/Financial freedom"
+          control={<Radio />}
+          label="oil and gas investment/Financial freedom"
+          onChange={(e) =>
+            handleChange({
+              target: {
+                id: "courses",
+                value: "oil and gas investment/Financial freedom",
+              },
+            })
+          }
+        />
+        <FormControlLabel
+          value="Mentorship"
+          control={<Radio />}
+          label="Mentorship"
+          onChange={(e) =>
+            handleChange({ target: { id: "courses", value: "Mentorship" } })
+          }
         />
       </Stack>
 
