@@ -151,7 +151,6 @@ const Register = () => {
         <Typography variant="h6" gutterBottom>
           School of oil and gas and business courses
         </Typography>
-        <Typography variant="body2" sx={{ mb: 5 }}></Typography>
 
         <FormControlLabel
           control={
