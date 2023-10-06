@@ -201,6 +201,25 @@ const Register = () => {
         />
       </Stack>
 
+      <Typography variant="body2" sx={{ mb: 5 }}>
+        I hearby declare that the information provided in this form is accurate
+        and complete to the best of my knowledge.
+      </Typography>
+      <Typography variant="body2" sx={{ mb: 5 }}>
+        Date
+      </Typography>
+
+      <TextField
+        type="date"
+        placeholder="Date"
+        id="date"
+        onChange={handleChange}
+      />
+      <Typography variant="body2" sx={{ mb: 5 }}>
+        Thank you for choosing Safe Oil and Gas. We look forward to welcoming
+        you to our program and helping you achieve your career goals in the oil
+        and gas industry
+      </Typography>
       <LoadingButton
         fullWidth
         size="large"
@@ -210,7 +229,18 @@ const Register = () => {
       >
         Register
       </LoadingButton>
-
+      <Typography variant="h6" gutterBottom style={{ color: "red" }}>
+        Company account details
+      </Typography>
+      <Typography variant="h6" gutterBottom>
+        Account name: 24/7 safe oil & gas global limited
+      </Typography>
+      <Typography variant="h6" gutterBottom>
+        Bank: zenith bank
+      </Typography>
+      <Typography variant="h6" gutterBottom>
+        Account Number: 1017238268
+      </Typography>
       {/* Success Modal */}
       <Dialog open={showModal} onClose={handleCloseModal}>
         <DialogTitle>Registration Successful</DialogTitle>
