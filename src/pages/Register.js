@@ -11,6 +11,8 @@ import {
   TextField,
   Checkbox,
   Typography,
+  Radio,
+  FormControlLabel,
 } from "@mui/material";
 import Button from "@mui/material/Button";
 
@@ -79,12 +81,32 @@ const Register = () => {
         <Typography variant="body2" sx={{ mb: 5 }}>
           Gender
         </Typography>
-        <TextField
-          type="text"
-          placeholder="Male, Female, Others"
-          id="gender"
-          onChange={handleChange}
+
+        <FormControlLabel
+          value="male"
+          control={<Radio />}
+          label="Male"
+          onChange={(e) =>
+            handleChange({ target: { id: "gender", value: "male" } })
+          }
         />
+        <FormControlLabel
+          value="female"
+          control={<Radio />}
+          label="Female"
+          onChange={(e) =>
+            handleChange({ target: { id: "gender", value: "female" } })
+          }
+        />
+        <FormControlLabel
+          value="other"
+          control={<Radio />}
+          label="Other"
+          onChange={(e) =>
+            handleChange({ target: { id: "gender", value: "other" } })
+          }
+        />
+
         <Typography variant="body2" sx={{ mb: 5 }}>
           Others
         </Typography>
