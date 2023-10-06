@@ -213,6 +213,27 @@ const Register = () => {
         onChange={handleChange}
       />
       <Typography variant="body2" sx={{ mb: 5 }}>
+        How do you want to take the class?
+      </Typography>
+
+      <FormControlLabel
+        value="online"
+        control={<Radio />}
+        label="online"
+        onChange={(e) =>
+          handleChange({ target: { id: "class", value: "online" } })
+        }
+      />
+      <FormControlLabel
+        value="offline"
+        control={<Radio />}
+        label="offline"
+        onChange={(e) =>
+          handleChange({ target: { id: "class", value: "offline" } })
+        }
+      />
+
+      <Typography variant="body2" sx={{ mb: 5 }}>
         Thank you for choosing Safe Oil and Gas. We look forward to welcoming
         you to our program and helping you achieve your career goals in the oil
         and gas industry
