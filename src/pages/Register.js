@@ -205,9 +205,6 @@ const Register = () => {
         I hearby declare that the information provided in this form is accurate
         and complete to the best of my knowledge.
       </Typography>
-      <Typography variant="body2" sx={{ mb: 5 }}>
-        Date
-      </Typography>
 
       <TextField
         type="date"
