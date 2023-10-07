@@ -180,13 +180,13 @@ const Register = () => {
           control={
             <Checkbox
               checked={info.courses.includes(
-                "Oil and Gas Investment/Financial Freedom"
+                "oil and gas investment or Financial freedom"
               )}
               onChange={handleCourseChange}
-              value="Oil and Gas Investment/Financial Freedom"
+              value="oil and gas investment or Financial freedom"
             />
           }
-          label="Oil and Gas Investment/Financial Freedom"
+          label="oil and gas investment or Financial freedom"
         />
         <FormControlLabel
           control={
