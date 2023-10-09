@@ -35,10 +35,7 @@ const Register = () => {
     e.preventDefault();
     try {
       // Send registration data to your API endpoint
-      await axios.post(
-        "https://safeoil-1691d9bd24cd.herokuapp.com/api/auth/register",
-        info
-      );
+      await axios.post("http://localhost:4000/api/auth/register", info);
 
       // Show the success modal
       setShowModal(true);
@@ -53,7 +50,7 @@ const Register = () => {
 
   const handleCloseModal = () => {
     setShowModal(false);
-    navigate("/"); // Navigate to the home page after closing the modal
+    navigate("https://safeoilandgas.com.ng"); // Navigate to the home page after closing the modal
   };
 
   const handleCourseChange = (e) => {
