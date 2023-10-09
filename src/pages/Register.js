@@ -35,7 +35,10 @@ const Register = () => {
     e.preventDefault();
     try {
       // Send registration data to your API endpoint
-      await axios.post("http://localhost:4000/api/auth/register", info);
+      await axios.post(
+        "https://safeoil-1691d9bd24cd.herokuapp.com/api/auth/register",
+        info
+      );
 
       // Show the success modal
       setShowModal(true);
@@ -50,7 +53,7 @@ const Register = () => {
 
   const handleCloseModal = () => {
     setShowModal(false);
-    navigate("https://safeoilandgas.com.ng"); // Navigate to the home page after closing the modal
+    window.location.href = "https://www.safeoilandgas.com.ng";
   };
 
   const handleCourseChange = (e) => {
@@ -177,13 +180,13 @@ const Register = () => {
           control={
             <Checkbox
               checked={info.courses.includes(
-                "oil and gas investment or Financial freedom"
+                "Oil and Gas Investment/Financial Freedom"
               )}
               onChange={handleCourseChange}
-              value="oil and gas investment or Financial freedom"
+              value="Oil and Gas Investment/Financial Freedom"
             />
           }
-          label="oil and gas investment or Financial freedom"
+          label="Oil and Gas Investment/Financial Freedom"
         />
         <FormControlLabel
           control={
