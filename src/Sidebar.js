@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Footer from "./Footer";
-import Nav from "./Nav";
 
 const Sidebar = () => {
   return (

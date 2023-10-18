@@ -1,0 +1,99 @@
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked
+  .elementor-drop-cap {
+  background-color: #69727d;
+  color: #fff;
+}
+.elementor-widget-text-editor.elementor-drop-cap-view-framed
+  .elementor-drop-cap {
+  color: #69727d;
+  border: 3px solid;
+  background-color: transparent;
+}
+.elementor-widget-text-editor:not(.elementor-drop-cap-view-default)
+  .elementor-drop-cap {
+  margin-top: 8px;
+}
+.elementor-widget-text-editor:not(.elementor-drop-cap-view-default)
+  .elementor-drop-cap-letter {
+  width: 1em;
+  height: 1em;
+}
+.elementor-widget-text-editor .elementor-drop-cap {
+  float: left;
+  text-align: center;
+  line-height: 1;
+  font-size: 50px;
+}
+.elementor-widget-text-editor .elementor-drop-cap-letter {
+  display: inline-block;
+}
+.new {
+  max-width: 60%;
+  height: auto; /* Remove fixed height to maintain aspect ratio */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: auto;
+}
+
+@media only screen and (max-width: 320px) {
+  .propertiesContainer {
+    align-items: center;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .hot {
+    font-size: 16px;
+    margin-top: 20px;
+    color: black;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .propertiesContainer {
+    align-items: center;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .hot {
+    font-size: 16px;
+    margin-top: 20px;
+    color: black;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .propertiesContainer {
+    align-items: center;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .hot {
+    font-size: 16px;
+    margin-top: 20px;
+    color: black;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .propertiesContainer {
+    align-items: center;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .hot {
+    font-size: 16px;
+    margin-top: 20px;
+    color: black;
+    width: 100%;
+  }
+}
+.custom-card-img {
+  height: 200px; /* Adjust the height as needed */
+  width: 100%; /* Ensure the width scales with the height */
+  object-fit: cover; /* Maintain the aspect ratio and crop if necessary */
+}
