@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
 
-const About = () => {
+const Blog = () => {
   return (
     <div>
       <Nav />
@@ -13,7 +13,7 @@ const About = () => {
           <div className="row">
             <div className="col-12 col-lg-12">
               <div className="page-heading text-white">
-                <h1>Blog and News</h1>
+                <h1>Blog News and Events</h1>
               </div>
               <div className="breadcrumb-wrap">
                 <nav>
@@ -22,7 +22,7 @@ const About = () => {
                       <a href="index.html">Home</a>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
-                      about us
+                      Blog
                     </li>
                   </ol>
                 </nav>
@@ -165,4 +165,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Blog;

@@ -13,7 +13,7 @@ const Nav = () => {
           <div className="main-menu d-none d-xl-block">
             <ul>
               <li>
-                <a href="index.html">Home</a>
+                <a href="/">Home</a>
               </li>
               <li>
                 <a href="services.html">Services</a>
@@ -22,7 +22,7 @@ const Nav = () => {
                 <a href="product.html">Product</a>
               </li>
               <li>
-                <a href="#">
+                <a href="/about">
                   About <i className="fal fa-plus"></i>
                 </a>
                 <ul className="sub-menu">
@@ -38,7 +38,10 @@ const Nav = () => {
                 </ul>
               </li>
               <li>
-                <a href="news.html">News</a>
+                <a href="/blog">Blog</a>
+              </li>
+              <li>
+                <a href="/register">Register</a>
               </li>
               <li>
                 <a href="contact.html">Contact</a>

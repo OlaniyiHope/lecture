@@ -156,70 +156,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="about-section section-padding pt-0">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-6 col-lg-7 col-md-10 col-12">
-              <div className="block-contents">
-                <div className="section-title">
-                  <span> About Safe Oil and Gas Ltd</span>
-                  <h6>What we do</h6>
-                </div>
-                <p>
-                  We offer one of the largest construction and supply of LPG
-                  products and gas plant in Nigeria. We provide maintenance
-                  services and a strong construction and supply of gas plant and
-                  LPG in all six geopolitical zones in Nigeria. We continually
-                  develop strategic infrastructure to facilitate the operational
-                  efficiency of our integrated bouquet of services.
-                </p>
-                <p>
-                  <strong>Our Mission</strong> is to deliver a balanced supply
-                  of natural gas and energy resources and to ensure reliable
-                  construction of LPG gas plants in the oil and gas sector.
-                </p>
-                <p>
-                  <strong>Our Vision</strong> is to contribute and add value to
-                  Nigeria's oil and gas sector and to the world at large, so
-                  that more people can benefit.
-                </p>
-                <p>
-                  <strong>Operational Excellence</strong>: We pursue continuous
-                  improvement of assets and workflows through collaboration and
-                  exchange of ideas with internal and external stakeholders to
-                  add value to all parties.
-                </p>
-                <p>
-                  <strong>Safety Leadership</strong>: We are committed to
-                  performing all business activities in a safe and efficient
-                  manner. Our goal is to prevent all accidents, injuries, and
-                  occupational illnesses.
-                </p>
-              </div>
-              <a href="about.html" className="plus-text-btn mt-lg-5 mt-4">
-                <div className="icon">
-                  <i className="fas fa-plus"></i>
-                </div>
-                <div className="link-text">
-                  <span>Explore</span> More about Us
-                </div>
-              </a>
-            </div>
-            <div className="col-xl-6 col-lg-5 col-12">
-              <div className="img-block-pop-video">
-                <img src="assets/img/8.jpeg" alt="busico" />
-                <div className="popup-video-block d-flex justify-content-center align-items-center ">
-                  <div className="video-play-btn">
-                    <video width="320" height="240" controls>
-                      <source src="assets/img/vid.MOV" type="video/mp4" />
-                    </video>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <section className="our-service-wrapper section-padding bg-gray">
         <div className="container">
           <div className="row mtm-30">
@@ -392,45 +329,13 @@ const Home = () => {
             <div className="col-md-6 col-xl-4 col-12">
               <div className="single-team-member">
                 <div className="team-img">
-                  <img src="assets/img/13.jpeg" alt="" />
-                </div>
-                <div className="team-details-bar">
-                  <div className="member-details">
-                    <div className="member-data">
-                      <span>Contractor</span>
-                      <h3>Abraham Reza</h3>
-                    </div>
-                    <div className="social-profile">
-                      <a href="#">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-linkedin"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <a href="team-details.html" className="plus-btn">
-                    <i className="fal fa-plus"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-xl-4 col-12">
-              <div className="single-team-member">
-                <div className="team-img">
                   <img src="assets/img/40.jpeg" alt="" />
                 </div>
                 <div className="team-details-bar">
                   <div className="member-details">
                     <div className="member-data">
-                      <span>CEO</span>
-                      <h4>Engr Safe oil and gas</h4>
+                      <span>Demola Wealth</span>
+                      <h4>CEO Safe oil and gas</h4>
                     </div>
                     <div className="social-profile">
                       <a href="#">
@@ -456,13 +361,106 @@ const Home = () => {
             <div className="col-md-6 col-xl-4 col-12">
               <div className="single-team-member">
                 <div className="team-img">
-                  <img src="assets/img/11.jpeg" alt="" />
+                  <img src="assets/img/what.jpeg" alt="" />
                 </div>
                 <div className="team-details-bar">
                   <div className="member-details">
                     <div className="member-data">
-                      <span>Mechanic</span>
-                      <h3>Daniel David</h3>
+                      <h3>Manager</h3>
+                    </div>
+                    <div className="social-profile">
+                      <a href="https://facebook.com/safeoilandgas">
+                        <i className="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="https://twitter.com/safeoilandgas">
+                        <i className="fab fa-twitter"></i>
+                      </a>
+                      <a href="http://instagram.com/safeoilandgas">
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <a href="team-details.html" className="plus-btn">
+                    <i className="fal fa-plus"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-xl-4 col-12">
+              <div className="single-team-member">
+                <div className="team-img">
+                  <img src="assets/img/team2.jpg" alt="" />
+                </div>
+                <div className="team-details-bar">
+                  <div className="member-details">
+                    <div className="member-data">
+                      <h3>Team</h3>
+                    </div>
+                    <div className="social-profile">
+                      <a href="#">
+                        <i className="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-twitter"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <a href="team-details.html" className="plus-btn">
+                    <i className="fal fa-plus"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-6 col-xl-4 col-12">
+              <div className="single-team-member">
+                <div className="team-img">
+                  <img src="assets/img/all2.jpeg" alt="" />
+                </div>
+                <div className="team-details-bar">
+                  <div className="member-details">
+                    <div className="member-data">
+                      <h3>Secretary</h3>
+                    </div>
+                    <div className="social-profile">
+                      <a href="#">
+                        <i className="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-twitter"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <a href="team-details.html" className="plus-btn">
+                    <i className="fal fa-plus"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-xl-4 col-12">
+              <div className="single-team-member">
+                <div className="team-img">
+                  <img src="assets/img/sup.jpg" alt="" />
+                </div>
+                <div className="team-details-bar">
+                  <div className="member-details">
+                    <div className="member-data">
+                      <h3>Supervisor</h3>
                     </div>
                     <div className="social-profile">
                       <a href="#">
