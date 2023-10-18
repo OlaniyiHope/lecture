@@ -13,6 +13,7 @@ import LoginPage from "./pages/LoginPage";
 import Blog from "./pages/Blog";
 import Sidebar from "./Sidebar";
 import BlogDet from "./pages/BlogDet";
+import Banner from "./pages/Banner";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/banner" element={<Banner />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/register" element={<LoginPage />} />
           <Route exact path="/blog" element={<Blog />} />

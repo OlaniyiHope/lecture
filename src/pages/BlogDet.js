@@ -17,23 +17,26 @@ const BlogDet = () => {
     <div>
       <Nav />
       <div
-        className="page-banner-wrap bg-cover"
-        style={{ backgroundImage: 'url("assets/img/60.jpg")' }}
+        className=" bg-cover"
+        style={{
+          backgroundImage: 'url("assets/img/60.jpg")',
+          height: "500px",
+        }}
       >
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-12">
-              <div className="page-heading text-white">{data?.title}</div>
+              <div
+                className="page-heading text-white"
+                style={{ marginTop: "60px" }}
+              >
+                <h1>Blog News and Events</h1>
+              </div>
               <div className="breadcrumb-wrap">
                 <nav>
                   <ol className="breadcrumb">
                     <li className="breadcrumb-item">
-                      <a href="index.html">
-                        <span style={{ color: "yellow" }}>Posted</span>{" "}
-                        {formattedDate}
-                        <span style={{ color: "yellow" }}>By</span>{" "}
-                        {data?.authorName}
-                      </a>
+                      <a href="index.html">Home</a>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
                       Blog
@@ -46,7 +49,9 @@ const BlogDet = () => {
         </div>
       </div>
 
-      <div className="elementor-widget-container">
+      <div className="elementor-widget-container text-center">
+        {" "}
+        {/* Center the blog images */}
         <div className="row">
           {data.photos?.map((photo, i) => (
             <div className="col-lg-4 col-md-6 col-sm-12" key={i}>
@@ -58,7 +63,12 @@ const BlogDet = () => {
 
       <div
         className="elementor-widget-container"
-        style={{ textAlign: "justify", width: "80%", margin: "auto" }}
+        style={{
+          textAlign: "justify",
+          width: "80%",
+          margin: "auto",
+          marginTop: "20px", // Add margin top for space
+        }}
       >
         <p
           dangerouslySetInnerHTML={{
