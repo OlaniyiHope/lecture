@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Nav from "./Nav";
 import { useLocation, Link } from "react-router-dom";
 import DOMPurify from "dompurify";
 import useFetch from "../hooks/useFetch";
 import "./Blog.css";
 import Footer from "./Footer";
+import backgroundImage from "./60.jpg"; //
 
 const BlogDet = () => {
   const location = useLocation();
@@ -16,30 +17,43 @@ const BlogDet = () => {
   return (
     <div>
       <Nav />
+
       <div
-        className=" bg-cover"
+        className="bg-cover"
         style={{
-          backgroundImage: 'url("assets/img/60.jpg")',
-          height: "500px",
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          position: "relative",
+          height: "600px",
+          maxWidth: "100%", // Set a max width to prevent overflow
         }}
       >
-        <div className="container">
+        <div className="container" style={{ maxWidth: "100%" }}>
           <div className="row">
             <div className="col-12 col-lg-12">
               <div
                 className="page-heading text-white"
-                style={{ marginTop: "60px" }}
+                style={{ marginTop: "260px" }}
               >
-                <h1>Blog News and Events</h1>
+                <h1>{data.title}</h1>
               </div>
               <div className="breadcrumb-wrap">
                 <nav>
                   <ol className="breadcrumb">
-                    <li className="breadcrumb-item">
-                      <a href="index.html">Home</a>
+                    <li className="breadcrumb-item" style={{ color: "white" }}>
+                      Posted on the{" "}
+                      <a href="index.html" style={{ color: "white" }}>
+                        {formattedDate}
+                      </a>
                     </li>
-                    <li className="breadcrumb-item active" aria-current="page">
-                      Blog
+                    <li
+                      className="breadcrumb-item active"
+                      aria-current="page"
+                      style={{ color: "white" }}
+                    >
+                      By {data.authorName}
                     </li>
                   </ol>
                 </nav>
@@ -50,11 +64,13 @@ const BlogDet = () => {
       </div>
 
       <div className="elementor-widget-container text-center">
-        {" "}
-        {/* Center the blog images */}
         <div className="row">
           {data.photos?.map((photo, i) => (
-            <div className="col-lg-4 col-md-6 col-sm-12" key={i}>
+            <div
+              className="col-lg-4 col-md-6 col-sm-12"
+              key={i}
+              style={{ margin: "auto" }}
+            >
               <img src={photo} alt="" className="new" />
             </div>
           ))}
@@ -63,12 +79,7 @@ const BlogDet = () => {
 
       <div
         className="elementor-widget-container"
-        style={{
-          textAlign: "justify",
-          width: "80%",
-          margin: "auto",
-          marginTop: "20px", // Add margin top for space
-        }}
+        style={{ textAlign: "Justify", width: "80%", margin: "auto" }}
       >
         <p
           dangerouslySetInnerHTML={{

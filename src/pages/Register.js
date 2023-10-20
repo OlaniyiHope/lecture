@@ -137,7 +137,7 @@ const Register = () => {
           onChange={handleChange}
         />
         <TextField
-          type="text"
+          type="number"
           placeholder="Phone Number"
           id="phone"
           onChange={handleChange}

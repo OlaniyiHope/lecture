@@ -26,7 +26,7 @@ function App() {
           <Route exact path="/register" element={<LoginPage />} />
           <Route exact path="/blog" element={<Blog />} />
           <Route exact path="/sidebar" element={<Sidebar />} />
-          <Route path="/singleblog/:id" element={<BlogDet />} />
+          <Route exact path="/singleblog/:id" element={<BlogDet />} />
         </Routes>
       </Router>
     </div>
