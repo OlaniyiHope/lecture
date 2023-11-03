@@ -168,7 +168,7 @@ const Register = () => {
                 "LPG(Cooking Gas) Sales and Management"
               )}
               onChange={handleCourseChange}
-              value="LPG(Cooking Gas) Sales and Management"
+              name="LPG(Cooking Gas) Sales and Management"
             />
           }
           label="LPG(Cooking Gas) Sales and Management"
@@ -180,7 +180,7 @@ const Register = () => {
                 "Construction and Installation of LPG (cooking gas)"
               )}
               onChange={handleCourseChange}
-              value="Construction and Installation of LPG (cooking gas)"
+              name="Construction and Installation of LPG (cooking gas)"
             />
           }
           label="Construction and Installation of LPG (cooking gas)"
@@ -192,7 +192,7 @@ const Register = () => {
                 "Oil and Gas Investment/Financial Freedom"
               )}
               onChange={handleCourseChange}
-              value="Oil and Gas Investment/Financial Freedom"
+              name="Oil and Gas Investment/Financial Freedom"
             />
           }
           label="Oil and Gas Investment/Financial Freedom"
@@ -202,7 +202,7 @@ const Register = () => {
             <Checkbox
               checked={info.courses.includes("Mentorship")}
               onChange={handleCourseChange}
-              value="Mentorship"
+              name="Mentorship"
             />
           }
           label="Mentorship"
