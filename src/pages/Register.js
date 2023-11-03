@@ -36,7 +36,7 @@ const Register = () => {
     try {
       // Send registration data to your API endpoint
       await axios.post(
-        "https://safeoil-1691d9bd24cd.herokuapp.com/api/auth/register",
+        "https://safeadminapi-9c40f7aa7fc6.herokuapp.com/api/auth/register",
         info
       );
 
