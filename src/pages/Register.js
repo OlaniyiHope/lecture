@@ -57,14 +57,23 @@ const Register = () => {
   };
 
   const handleCourseChange = (e) => {
-    const { id, value } = e.target;
+    const { name, checked } = e.target;
 
-    // Check if the course is already in the array, if yes, remove it, else add it
+    // Create a copy of the current courses array
+    let updatedCourses = [...info.courses];
+
+    if (checked) {
+      // If the checkbox is checked, add the course to the array
+      updatedCourses.push(name);
+    } else {
+      // If the checkbox is unchecked, remove the course from the array
+      updatedCourses = updatedCourses.filter((course) => course !== name);
+    }
+
+    // Update the courses in the info state
     setInfo((prev) => ({
       ...prev,
-      courses: prev.courses.includes(value)
-        ? prev.courses.filter((course) => course !== value)
-        : [...prev.courses, value],
+      courses: updatedCourses,
     }));
   };
 
