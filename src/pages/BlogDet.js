@@ -19,17 +19,18 @@ const BlogDet = () => {
       <Nav />
 
       <div
-        className="bg-cover"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-          position: "relative",
-          height: "600px",
-          maxWidth: "100%", // Set a max width to prevent overflow
-        }}
+      // className="bg-cover"
+      // style={{
+      //   backgroundImage: `url(${backgroundImage})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center center",
+      //   backgroundRepeat: "no-repeat",
+      //   position: "relative",
+      //   height: "600px",
+      //   maxWidth: "100%", // Set a max width to prevent overflow
+      // }}
       >
+        {data.img}
         <div className="container" style={{ maxWidth: "100%" }}>
           <div className="row">
             <div className="col-12 col-lg-12">
