@@ -5038,7 +5038,6 @@ header .header-top-bar .top-social-icons a:hover {
   text-align: center;
 }
 .about-cover-bg .our-experience-years .year-outline {
-  background-image: url("../img/outline.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   -webkit-text-fill-color: transparent;
@@ -8685,7 +8684,7 @@ header .header-top-bar .top-social-icons a:hover {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("../img/map.png");
+
   background-repeat: no-repeat;
   background-color: #001659;
   width: 100%;
@@ -9423,7 +9422,6 @@ header .header-top-bar .top-social-icons a:hover {
 .blog-wrapper .single-blog-post.format-quote .post-content {
   position: relative;
   background-color: #ff5e14;
-  background-image: url("../img/quotepost.png");
 }
 .blog-wrapper .single-blog-post.quote-post .quote-content,
 .blog-wrapper .single-blog-post.format-quote .quote-content {
@@ -11080,7 +11078,7 @@ header .header-top-bar .top-social-icons a:hover {
   z-index: 10;
   border-radius: 10px;
   background-color: #4e5aff !important;
-  background-image: url(../img/home5/footer_p.svg);
+
   background-position: bottom right;
   background-repeat: no-repeat;
 }
