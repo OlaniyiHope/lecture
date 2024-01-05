@@ -6,7 +6,7 @@ import useFetch from "../hooks/useFetch";
 import "./Blog.css";
 import Footer from "./Footer";
 import backgroundImage from "./60.jpg"; //
-
+import "./style2.css";
 const BlogDet = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
