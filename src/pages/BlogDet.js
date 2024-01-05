@@ -19,18 +19,18 @@ const BlogDet = () => {
       <Nav />
 
       <div
-      // className="bg-cover"
-      // style={{
-      //   backgroundImage: `url(${backgroundImage})`,
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center center",
-      //   backgroundRepeat: "no-repeat",
-      //   position: "relative",
-      //   height: "600px",
-      //   maxWidth: "100%", // Set a max width to prevent overflow
-      // }}
+        className="bg-cover"
+        style={{
+          backgroundImage: `url(${data.photos})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          position: "relative",
+          height: "600px",
+
+          maxWidth: "100%", // Set a max width to prevent overflow
+        }}
       >
-        {data.img}
         <div className="container" style={{ maxWidth: "100%" }}>
           <div className="row">
             <div className="col-12 col-lg-12">
@@ -38,43 +38,38 @@ const BlogDet = () => {
                 className="page-heading text-white"
                 style={{ marginTop: "260px" }}
               >
-                <h1>{data.title}</h1>
+                <h1
+                  style={{
+                    color: "black !important",
+                    opacity: "none",
+                    fontWeight: "1000",
+                    backgroundColor: "#ff5e14",
+                  }}
+                >
+                  {data.title}
+                </h1>
               </div>
               <div className="breadcrumb-wrap">
                 <nav>
                   <ol className="breadcrumb">
-                    <li className="breadcrumb-item" style={{ color: "white" }}>
+                    <li
+                      className="breadcrumb-item"
+                      style={{
+                        color: "white",
+                        backgroundColor: "#ff5e14",
+                        padding: "10px",
+                      }}
+                    >
                       Posted on the{" "}
                       <a href="index.html" style={{ color: "white" }}>
                         {formattedDate}
                       </a>
-                    </li>
-                    <li
-                      className="breadcrumb-item active"
-                      aria-current="page"
-                      style={{ color: "white" }}
-                    >
-                      By {data.authorName}
                     </li>
                   </ol>
                 </nav>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="elementor-widget-container text-center">
-        <div className="row">
-          {data.photos?.map((photo, i) => (
-            <div
-              className="col-lg-4 col-md-6 col-sm-12"
-              key={i}
-              style={{ margin: "auto" }}
-            >
-              <img src={photo} alt="" className="new" />
-            </div>
-          ))}
         </div>
       </div>
 
