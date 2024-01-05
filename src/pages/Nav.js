@@ -16,10 +16,10 @@ const Nav = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="services.html">Services</a>
+                <a href="/services">Services</a>
               </li>
               <li>
-                <a href="product.html">Product</a>
+                <a href="/product">Product</a>
               </li>
               <li>
                 <a href="/about">
@@ -27,24 +27,19 @@ const Nav = () => {
                 </a>
                 <ul className="sub-menu">
                   <li>
-                    <a href="about.html">Our Company</a>
+                    <a href="/about">What we do</a>
                   </li>
                   <li>
-                    <a href="team.html">Our Team</a>
-                  </li>
-                  <li>
-                    <a href="services.html">What we do</a>
+                    <a href="/team">Our Team</a>
                   </li>
                 </ul>
               </li>
               <li>
                 <a href="/blog">Blog</a>
               </li>
+
               <li>
-                <a href="/register">Register</a>
-              </li>
-              <li>
-                <a href="contact.html">Contact</a>
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -69,32 +64,31 @@ const Nav = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="services.html">Services</a>
+                        <a href="/service">Services</a>
                       </li>
                       <li>
-                        <a href="product.html">product</a>
+                        <a href="/product">product</a>
                       </li>
+
                       <li>
                         <a className="has-arrow" href="#">
                           About
                         </a>
                         <ul className="sub-menu">
                           <li>
-                            <a href="about.html">Our company</a>
+                            <a href="/about">What we do</a>
                           </li>
                           <li>
-                            <a href="team.html">Our Team</a>
-                          </li>
-                          <li>
-                            <a href="services.html">What we do</a>
+                            <a href="/team">Our Team</a>
                           </li>
                         </ul>
                       </li>
+
                       <li>
-                        <a href="news.html">News</a>
+                        <a href="/blog">Blog</a>
                       </li>
                       <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="/contact">Contact</a>
                       </li>
                     </ul>
                   </nav>
