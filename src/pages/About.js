@@ -13,7 +13,7 @@ const About = () => {
           <div className="row">
             <div className="col-12 col-lg-12">
               <div className="page-heading text-white">
-                <h1>Blog and News</h1>
+                <h1>About us</h1>
               </div>
               <div className="breadcrumb-wrap">
                 <nav>
