@@ -21,7 +21,7 @@ const BlogDet = () => {
       <div
         className="bg-cover"
         style={{
-          backgroundImage: `url(${data.photos})`,
+          // backgroundImage: `url(${data.photos})`,
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
