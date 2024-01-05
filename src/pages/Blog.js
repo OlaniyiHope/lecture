@@ -25,7 +25,7 @@ const Blog = () => {
                 className="page-heading text-white"
                 style={{ marginTop: "60px" }}
               >
-                <h1>Blog News and Events</h1>
+                <h1>Blog Post</h1>
               </div>
               <div className="breadcrumb-wrap">
                 <nav>
