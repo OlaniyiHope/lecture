@@ -3,7 +3,7 @@ import Nav from "./Nav";
 import { useLocation, Link } from "react-router-dom";
 import DOMPurify from "dompurify";
 import useFetch from "../hooks/useFetch";
-import "./Blog.css";
+import "./sty.css";
 import Footer from "./Footer";
 import backgroundImage from "./60.jpg"; //
 
@@ -16,33 +16,52 @@ const BlogDet = () => {
 
   return (
     <div>
-      <Nav />
-
-      <div
-        className="bg-cover"
+      <img
+        src={backgroundImage}
         style={{
-          backgroundImage: `url(${data.photos})`,
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
           position: "relative",
-          height: "600px",
-
-          maxWidth: "100%", // Set a max width to prevent overflow
+          height: "500px",
+          width: "100%",
+          maxWidth: "100%",
         }}
+      />
+      <h1
+        style={{
+          color: "black !important",
+          opacity: "none",
+          fontWeight: "1000",
+          marginTop: "200px",
+          position: "absolute",
+          backgroundColor: "#ff5e14",
+        }}
+      >
+        {data.title}
+      </h1>
+      <div
+      // style={{
+      //   backgroundImage: `url(${data.photos})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center center",
+      //   backgroundRepeat: "no-repeat",
+      //   position: "relative",
+      //   height: "600px",
+
+      //   maxWidth: "100%", // Set a max width to prevent overflow
+      // }}
       >
         <div className="container" style={{ maxWidth: "100%" }}>
           <div className="row">
             <div className="col-12 col-lg-12">
-              <div
-                className="page-heading text-white"
-                style={{ marginTop: "260px" }}
-              >
+              <div className="page-heading text-white">
                 <h1
                   style={{
                     color: "black !important",
                     opacity: "none",
                     fontWeight: "1000",
+                    marginTop: "200px",
                     backgroundColor: "#ff5e14",
                   }}
                 >

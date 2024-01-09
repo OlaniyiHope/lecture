@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import Sidebar from "./Sidebar";
 import BlogDet from "./pages/BlogDet";
 import Banner from "./pages/Banner";
+import Det from "./pages/Det";
 
 function App() {
   return (
@@ -25,8 +26,10 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/register" element={<LoginPage />} />
           <Route exact path="/blog" element={<Blog />} />
+
           <Route exact path="/sidebar" element={<Sidebar />} />
           <Route exact path="/singleblog/:id" element={<BlogDet />} />
+          <Route exact path="/" element={<Det />} />
         </Routes>
       </Router>
     </div>
