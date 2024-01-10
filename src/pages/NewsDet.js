@@ -30,7 +30,7 @@ const NewsDet = () => {
           <div class="row">
             <div class="col-12 col-lg-12">
               <div class="page-heading text-white">
-                <h1>Blog Details</h1>
+                <h1>{data.title}</h1>
               </div>
               <div class="breadcrumb-wrap">
                 <nav>
