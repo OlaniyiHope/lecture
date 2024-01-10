@@ -45,12 +45,13 @@ const News = () => {
           </div>
         </div>
       </div>
-      {data &&
-        data.map((item) => (
-          <section class="blog-wrapper news-wrapper section-padding">
-            <div class="container">
-              <div class="row">
-                <div class="col-12 col-lg-8">
+
+      <section class="blog-wrapper news-wrapper section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              {data &&
+                data.map((item) => (
                   <div class="blog-posts">
                     <div class="single-blog-post" key={item?._id}>
                       <div
@@ -104,80 +105,82 @@ const News = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="page-nav-wrap mt-60 text-center">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i class="fal fa-long-arrow-left"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">01</a>
-                      </li>
-                      <li>
-                        <a href="#">02</a>
-                      </li>
-                      <li>
-                        <a href="#">..</a>
-                      </li>
-                      <li>
-                        <a href="#">10</a>
-                      </li>
-                      <li>
-                        <a href="#">11</a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fal fa-long-arrow-right"></i>
-                        </a>
-                      </li>
-                    </ul>
+                ))}
+              <div class="page-nav-wrap mt-60 text-center">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fal fa-long-arrow-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">01</a>
+                  </li>
+                  <li>
+                    <a href="#">02</a>
+                  </li>
+                  <li>
+                    <a href="#">..</a>
+                  </li>
+                  <li>
+                    <a href="#">10</a>
+                  </li>
+                  <li>
+                    <a href="#">11</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fal fa-long-arrow-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class=" col-lg-4">
+              <div class="main-sidebar">
+                <div class="single-sidebar-widget author-box-widegts">
+                  <div class="wid-title">
+                    <h3>About Us</h3>
+                  </div>
+                  <div class="author-info text-center">
+                    <p>
+                      We are Safe Oil and Gas. we are a leading provider of
+                      comprehensive LPG tanks. With a commitment to excellence,
+                      safety, and compliance with both local and international
+                      standards, we specialize in the construction and
+                      installation of LPG plants tailored to meet the unique
+                      needs of our clients. Our experienced team of engineers
+                      and construction professionals are well-versed in the
+                      intricacies of LPG plant construction. We ensure that
+                      every project adheres to the highest standards of quality,
+                      safety, and environmental responsibility.
+                    </p>
+                    <div class="social-profile">
+                      <a href="https://facebook.com/safeoilandgas">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="https://twitter.com/safeoilandgas">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="https://insagram.com/safeoilandgas">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="https://linkedin.com/in/safeoilandgas">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                      <a href="https://youtube.com/safeoilandgas">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
-                <div class="col-12 col-lg-4">
-                  <div class="main-sidebar">
-                    <div class="single-sidebar-widget author-box-widegts">
-                      <div class="wid-title">
-                        <h3>About Us</h3>
-                      </div>
-                      <div class="author-info text-center">
-                        <p>
-                          We are Safe Oil and Gas. we are a leading provider of
-                          comprehensive LPG tanks. With a commitment to
-                          excellence, safety, and compliance with both local and
-                          international standards, we specialize in the
-                          construction and installation of LPG plants tailored
-                          to meet the unique needs of our clients. Our
-                          experienced team of engineers and construction
-                          professionals are well-versed in the intricacies of
-                          LPG plant construction. We ensure that every project
-                          adheres to the highest standards of quality, safety,
-                          and environmental responsibility.
-                        </p>
-                        <div class="social-profile">
-                          <a href="https://facebook.com/safeoilandgas">
-                            <i class="fab fa-facebook-f"></i>
-                          </a>
-                          <a href="https://twitter.com/safeoilandgas">
-                            <i class="fab fa-twitter"></i>
-                          </a>
-                          <a href="https://insagram.com/safeoilandgas">
-                            <i class="fab fa-instagram"></i>
-                          </a>
-                          <a href="https://linkedin.com/in/safeoilandgas">
-                            <i class="fab fa-linkedin-in"></i>
-                          </a>
-                          <a href="https://youtube.com/safeoilandgas">
-                            <i class="fab fa-youtube"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="single-sidebar-widget">
-                      <div class="wid-title">
-                        <h3>Latest News</h3>
-                      </div>
+                <div class="single-sidebar-widget">
+                  <div class="wid-title">
+                    <h3>Latest News</h3>
+                  </div>
+                  {data &&
+                    data.map((item) => (
                       <div class="popular-posts">
                         <div class="single-post-item">
                           <div
@@ -199,13 +202,13 @@ const News = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    ))}
                 </div>
               </div>
             </div>
-          </section>
-        ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
