@@ -6,7 +6,7 @@ const Nav = () => {
       <div className="container-fluid d-flex justify-content-between align-items-center">
         <div className="logo">
           <a href="index.html">
-            <img src="assets/img/safe.png" alt="logo" />
+            <img src="/assets/img/safe.png" alt="logo" />
           </a>
         </div>
         <div className="header-right-area d-flex">
