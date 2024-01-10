@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
 import useFetch from "../hooks/useFetch";
 import { useLocation, Link } from "react-router-dom";
-
+import rrll from "./safeimg.jpeg";
 import "./Blog.css";
 import Footer from "./Footer";
 import DOMPurify from "dompurify";
@@ -23,10 +23,10 @@ const NewsDet = () => {
       <div
         class="page-banner-wrap bg-cover"
         style={{
-          backgroundImage: 'url("assets/img/newsafe.png")',
+          backgroundImage: 'url("/assets/img/newsafe.png")',
         }}
       >
-        <div class="container">
+        <div class="container" style={{ paddingTop: "100px" }}>
           <div class="row">
             <div class="col-12 col-lg-12">
               <div class="page-heading text-white">
@@ -39,7 +39,7 @@ const NewsDet = () => {
                       <a href="/">Home</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
-                      news
+                      Blog
                     </li>
                   </ol>
                 </nav>

@@ -23,7 +23,7 @@ const News = () => {
           backgroundImage: 'url("assets/img/newsafe.png")',
         }}
       >
-        <div class="container">
+        <div class="container" style={{ paddingTop: "100px" }}>
           <div class="row">
             <div class="col-12 col-lg-12">
               <div class="page-heading text-white">
@@ -36,7 +36,7 @@ const News = () => {
                       <a href="index.html">Home</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
-                      news
+                      Blog
                     </li>
                   </ol>
                 </nav>
@@ -194,7 +194,7 @@ const News = () => {
                             </h5>
                             <div class="post-date">
                               <i class="far fa-calendar-alt"></i>
-                              {item.datePosted}
+                              {formattedDate}
                             </div>
                           </div>
                         </div>

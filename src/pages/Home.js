@@ -9,7 +9,10 @@ const Home = () => {
       <body class="body-wrapper">
         <div
           className="page-banner-wrap bg-cover"
-          style={{ backgroundImage: 'url("assets/img/60.jpg")' }}
+          style={{
+            backgroundImage: 'url("assets/img/60.jpg")',
+            paddingTop: "200px",
+          }}
         >
           <div className="container">
             <div className="row">
