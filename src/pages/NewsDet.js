@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
 import useFetch from "../hooks/useFetch";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import rrll from "./safeimg.jpeg";
 import "./Blog.css";
 import Footer from "./Footer";
 import DOMPurify from "dompurify";
 const NewsDet = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const id = location.pathname.split("/")[2];
   const { data, loading, error } = useFetch(`/properties/find/${id}`);
   const { datePosted } = data;
@@ -22,6 +23,13 @@ const NewsDet = () => {
       document.title = ` ${data.title}`;
     }
   }, [data]);
+
+  useEffect(() => {
+    if (data && data.title) {
+      const newUrl = `/singleblog/${data.title.replace(/\s+/g, "-")}`;
+      navigate(newUrl, { replace: true });
+    }
+  }, [data, navigate]);
 
   return (
     <div>
