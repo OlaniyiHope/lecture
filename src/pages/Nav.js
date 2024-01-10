@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Nav = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <header className="header-wrap header-1">
       <div className="container-fluid d-flex justify-content-between align-items-center">
@@ -49,7 +55,7 @@ const Nav = () => {
             </a>
             <div className="d-inline-block ms-4 d-xl-none">
               <div className="mobile-nav-wrap">
-                <div id="hamburger">
+                <div id="hamburger" onClick={toggleMobileMenu}>
                   <i className="fal fa-bars"></i>
                 </div>
                 <div className="mobile-nav">
@@ -100,7 +106,7 @@ const Nav = () => {
                     <a href="tel:123-456-7890">
                       <i className="fal fa-phone"></i>08038763637
                     </a>
-                    <a href="contact.html" className="d-btn theme-btn">
+                    <a href="/contact" className="d-btn theme-btn">
                       Contact Us
                     </a>
                   </div>

@@ -17,6 +17,7 @@ import Banner from "./pages/Banner";
 import Det from "./pages/Det";
 import News from "./pages/News";
 import NewsDet from "./pages/NewsDet";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route exact path="/" element={<Det />} />
           <Route exact path="/news" element={<News />} />
           <Route exact path="/singleblog/:id" element={<NewsDet />} />
+          <Route exact path="/contact" element={<Contact />} />
         </Routes>
       </Router>
     </div>

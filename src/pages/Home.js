@@ -36,7 +36,7 @@ const Home = () => {
                   </p>
 
                   <a
-                    href="contact.html"
+                    href="/contact"
                     className="theme-btn me-sm-4 wow fadeInLeft"
                     data-wow-duration="1.2s"
                     data-wow-delay=".8s"
