@@ -107,7 +107,7 @@ const Contact = () => {
                     </div>
                     <div class="text">
                       <span>Email Us</span>
-                      <h5>info@example.com</h5>
+                      <h5>info@safeoilandgas.com.ng</h5>
                     </div>
                   </div>
                   <div class="single-info">
@@ -116,7 +116,7 @@ const Contact = () => {
                     </div>
                     <div class="text">
                       <span>Call Us</span>
-                      <h5>+673 853 605 985</h5>
+                      <h5>+2349134777222</h5>
                     </div>
                   </div>
                   <div class="single-info">
@@ -125,17 +125,12 @@ const Contact = () => {
                     </div>
                     <div class="text">
                       <span>Location</span>
-                      <h5>4821 Mainer St NY, USA</h5>
+                      <h5>
+                        i201, i202 Ogba Multipurpose Hall adjacent Sunday
+                        market, along wempco, Ogba, Ikeja lagos
+                      </h5>
                     </div>
                   </div>
-                </div>
-
-                <div class="live-chat">
-                  <h2>Live Chat</h2>
-                  <p>You can contact us on chat and explain your problems</p>
-                  <a href="#">
-                    <i class="flaticon-chatting"></i> Live Chat to Executive
-                  </a>
                 </div>
               </div>
             </div>
