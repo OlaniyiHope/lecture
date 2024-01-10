@@ -17,6 +17,12 @@ const NewsDet = () => {
   const handleReadMoreClick = () => {
     setShowFullContent(true);
   };
+  useEffect(() => {
+    if (data && data.title) {
+      document.title = ` ${data.title}`;
+    }
+  }, [data]);
+
   return (
     <div>
       <Nav />
