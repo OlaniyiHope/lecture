@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import logs from "./on.png";
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 // ----------------------------------------------------------------------
 
@@ -39,6 +41,7 @@ const StyledContent = styled("div")(({ theme }) => ({
 const LoginPage = () => {
   return (
     <>
+      <Nav />
       <StyledRoot>
         <Container maxWidth="sm">
           <StyledContent>
@@ -60,6 +63,7 @@ const LoginPage = () => {
           </StyledContent>
         </Container>
       </StyledRoot>
+      <Footer />
     </>
   );
 };

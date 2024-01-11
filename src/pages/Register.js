@@ -22,6 +22,7 @@ import { LoadingButton } from "@mui/lab";
 // ----------------------------------------------------------------------
 const Register = () => {
   const [file, setFile] = useState("");
+
   const [info, setInfo] = useState({
     courses: [], // Initialize courses as an empty array
   });
@@ -36,7 +37,7 @@ const Register = () => {
     try {
       // Send registration data to your API endpoint
       await axios.post(
-        "https://safeadminapi-9c40f7aa7fc6.herokuapp.com/api/auth/register",
+        "https://safeblog-b04f2f2a940f.herokuapp.com/api/registerschool",
         info
       );
 
@@ -53,7 +54,7 @@ const Register = () => {
 
   const handleCloseModal = () => {
     setShowModal(false);
-    window.location.href = "https://www.safeoilandgas.com.ng";
+    navigate("/");
   };
 
   const handleCourseChange = (e) => {
@@ -160,7 +161,9 @@ const Register = () => {
         <Typography variant="h6" gutterBottom>
           School of oil and gas and business courses
         </Typography>
-
+        <span style={{ fontWeight: "700" }}>
+          (Choose any of the courses you are interested in)
+        </span>
         <FormControlLabel
           control={
             <Checkbox
@@ -227,18 +230,6 @@ const Register = () => {
         onChange={(e) =>
           handleChange({ target: { id: "class", value: "offline" } })
         }
-      />
-
-      <Typography variant="body2" sx={{ mt: 5, mb: 5 }}>
-        I hearby declare that the information provided in this form is accurate
-        and complete to the best of my knowledge.
-      </Typography>
-
-      <TextField
-        type="date"
-        placeholder="Date"
-        id="date"
-        onChange={handleChange}
       />
 
       <Typography variant="body2" sx={{ mb: 5 }}>
