@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import {
@@ -20,32 +20,66 @@ import { LoadingButton } from "@mui/lab";
 import { Link } from "react-router-dom";
 
 const Register = () => {
-  const [file, setFile] = useState("");
-
   const [info, setInfo] = useState({
     courses: [],
     gender: "",
     nationality: "",
+    classType: "",
+    address: "",
+    phone: "",
+    email: "",
+    firstname: "",
+    middlename: "", // Added middlename field
+    lastname: "",
   });
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+    const { id, value } = e.target;
+    setInfo((prev) => ({
+      ...prev,
+      [id]: id === "classType" ? value.toLowerCase() : value,
+    }));
   };
+
+  useEffect(() => {
+    console.log("Current state:", info);
+  }, [info]);
 
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(
-        "https://safeblog-b04f2f2a940f.herokuapp.com/api/registerschool",
-        info
-      );
-      setShowModal(true);
+      // Check if classType and courses are provided
+      if (!info.classType || info.courses.length === 0) {
+        console.error("Class Type and Courses are required.");
+        return;
+      }
+
+      // Wait for the state to be updated
+      await new Promise((resolve) => setInfo(info, resolve));
     } catch (err) {
-      console.error("Registration failed:", err);
+      console.error("Setting state failed:", err);
+      return;
     }
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Now, info state is updated, and you can use it for the API call
+        await axios.post(
+          "https://safeblog-b04f2f2a940f.herokuapp.com/api/registerschool",
+          info
+        );
+        setShowModal(true);
+      } catch (err) {
+        console.error("Registration failed:", err);
+      }
+    };
+
+    fetchData();
+  }, [info]); // Run this effect whenever the 'info' state changes
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -82,7 +116,7 @@ const Register = () => {
         />
         <TextField
           type="text"
-          placeholder="MIddle Name"
+          placeholder="Middle Name" // Corrected placeholder
           id="middlename"
           onChange={handleChange}
         />
@@ -195,7 +229,7 @@ const Register = () => {
         control={<Radio />}
         label="online"
         onChange={(e) =>
-          handleChange({ target: { id: "class", value: "online" } })
+          handleChange({ target: { id: "classType", value: "online" } })
         }
       />
       <FormControlLabel
@@ -203,7 +237,7 @@ const Register = () => {
         control={<Radio />}
         label="offline"
         onChange={(e) =>
-          handleChange({ target: { id: "class", value: "offline" } })
+          handleChange({ target: { id: "classType", value: "offline" } })
         }
       />
       <Typography variant="body2" sx={{ mb: 5 }}>
