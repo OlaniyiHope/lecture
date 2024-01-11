@@ -1,7 +1,6 @@
+import React, { useState } from "react";
 import axios from "axios";
-import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-// @mui
+import { useNavigate } from "react-router-dom";
 import {
   Dialog,
   DialogTitle,
@@ -13,21 +12,24 @@ import {
   Typography,
   Radio,
   FormControlLabel,
+  Select,
+  MenuItem,
 } from "@mui/material";
 import Button from "@mui/material/Button";
-
 import { LoadingButton } from "@mui/lab";
-// components
+import { Link } from "react-router-dom";
 
-// ----------------------------------------------------------------------
 const Register = () => {
   const [file, setFile] = useState("");
 
   const [info, setInfo] = useState({
-    courses: [], // Initialize courses as an empty array
+    courses: [],
+    gender: "",
+    nationality: "",
   });
-  const [showModal, setShowModal] = useState(false); // State for showing the modal
+  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
+
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
@@ -35,20 +37,13 @@ const Register = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      // Send registration data to your API endpoint
       await axios.post(
         "https://safeblog-b04f2f2a940f.herokuapp.com/api/registerschool",
         info
       );
-
-      // Show the success modal
       setShowModal(true);
-
-      // Clear the form fields or perform any other necessary actions
     } catch (err) {
-      // Handle registration error
       console.error("Registration failed:", err);
-      // You can display an error message to the user if needed
     }
   };
 
@@ -59,19 +54,14 @@ const Register = () => {
 
   const handleCourseChange = (e) => {
     const { name, checked } = e.target;
-
-    // Create a copy of the current courses array
     let updatedCourses = [...info.courses];
 
     if (checked) {
-      // If the checkbox is checked, add the course to the array
       updatedCourses.push(name);
     } else {
-      // If the checkbox is unchecked, remove the course from the array
       updatedCourses = updatedCourses.filter((course) => course !== name);
     }
 
-    // Update the courses in the info state
     setInfo((prev) => ({
       ...prev,
       courses: updatedCourses,
@@ -105,32 +95,18 @@ const Register = () => {
         <Typography variant="body2" sx={{ mb: 5 }}>
           Gender
         </Typography>
-
-        <FormControlLabel
-          value="male"
-          control={<Radio />}
-          label="Male"
+        <Select
+          label="Gender"
+          value={info.gender}
           onChange={(e) =>
-            handleChange({ target: { id: "gender", value: "male" } })
+            handleChange({ target: { id: "gender", value: e.target.value } })
           }
-        />
-        <FormControlLabel
-          value="female"
-          control={<Radio />}
-          label="Female"
-          onChange={(e) =>
-            handleChange({ target: { id: "gender", value: "female" } })
-          }
-        />
-        <FormControlLabel
-          value="other"
-          control={<Radio />}
-          label="Other"
-          onChange={(e) =>
-            handleChange({ target: { id: "gender", value: "other" } })
-          }
-        />
-
+          sx={{ mb: 2 }}
+        >
+          <MenuItem value="male">Male</MenuItem>
+          <MenuItem value="female">Female</MenuItem>
+          <MenuItem value="other">Other</MenuItem>
+        </Select>
         <Typography variant="body2" sx={{ mb: 5 }}>
           Others
         </Typography>
@@ -214,7 +190,6 @@ const Register = () => {
       <Typography variant="body2" sx={{ mt: 5 }}>
         How do you want to take the class?
       </Typography>
-
       <FormControlLabel
         value="online"
         control={<Radio />}
@@ -231,7 +206,6 @@ const Register = () => {
           handleChange({ target: { id: "class", value: "offline" } })
         }
       />
-
       <Typography variant="body2" sx={{ mb: 5 }}>
         Thank you for choosing Safe Oil and Gas. We look forward to welcoming
         you to our program and helping you achieve your career goals in the oil
@@ -282,4 +256,5 @@ const Register = () => {
     </>
   );
 };
+
 export default Register;
