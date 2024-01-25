@@ -15,71 +15,78 @@ import {
   Select,
   MenuItem,
 } from "@mui/material";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Button from "@mui/material/Button";
 import { LoadingButton } from "@mui/lab";
 import { Link } from "react-router-dom";
+const initialState = {
+  firstname: "",
+  middlename: "",
+  lastname: "",
+  gender: "",
+  nationality: "",
+  email: "",
+  date: "",
+  phone: "",
+  address: "",
 
+  classes: "",
+  courses: [],
+};
 const Register = () => {
-  const [info, setInfo] = useState({
-    courses: [],
-    gender: "",
-    nationality: "",
-    classType: "",
-    address: "",
-    phone: "",
-    email: "",
-    firstname: "",
-    middlename: "", // Added middlename field
-    lastname: "",
-  });
+  const [formData, setFormData] = useState(initialState);
+  const {
+    firstname,
+    middlename,
+    lastname,
+    gender,
+    nationality,
+    email,
+    date,
+    phone,
+    address,
+    classes,
+    courses,
+  } = formData;
+
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setInfo((prev) => ({
-      ...prev,
-      [id]: id === "classType" ? value.toLowerCase() : value,
-    }));
-  };
-
-  useEffect(() => {
-    console.log("Current state:", info);
-  }, [info]);
-
-  const handleClick = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const formData = {
+      firstname,
+      middlename,
+      lastname,
+      gender,
+      nationality,
+      email,
+      date,
+      phone,
+      address,
+      classes,
+      courses,
+    };
     try {
-      // Check if classType and courses are provided
-      if (!info.classType || info.courses.length === 0) {
-        console.error("Class Type and Courses are required.");
-        return;
-      }
+      await axios.post(
+        `https://safeblog-b04f2f2a940f.herokuapp.com/api/users/register`,
+        {
+          ...formData,
+        }
+      );
 
-      // Wait for the state to be updated
-      await new Promise((resolve) => setInfo(info, resolve));
+      // navigate("/dashboard/admin");
+      toast.success("User successfully created");
     } catch (err) {
-      console.error("Setting state failed:", err);
-      return;
+      console.error("Error registering student:", err);
+      toast.error("Unable to create user");
     }
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // Now, info state is updated, and you can use it for the API call
-        await axios.post(
-          "https://safeblog-b04f2f2a940f.herokuapp.com/api/users/register",
-          info
-        );
-        setShowModal(true);
-      } catch (err) {
-        console.error("Registration failed:", err);
-      }
-    };
-
-    fetchData();
-  }, [info]); // Run this effect whenever the 'info' state changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -88,7 +95,7 @@ const Register = () => {
 
   const handleCourseChange = (e) => {
     const { name, checked } = e.target;
-    let updatedCourses = [...info.courses];
+    let updatedCourses = [...formData.courses];
 
     if (checked) {
       updatedCourses.push(name);
@@ -96,7 +103,7 @@ const Register = () => {
       updatedCourses = updatedCourses.filter((course) => course !== name);
     }
 
-    setInfo((prev) => ({
+    setFormData((prev) => ({
       ...prev,
       courses: updatedCourses,
     }));
@@ -109,31 +116,33 @@ const Register = () => {
           Personal Information
         </Typography>
         <TextField
-          type="text"
-          placeholder="First Name"
-          id="firstname"
+          name="firstname"
+          label="First Name"
+          value={formData.firstname}
+          onChange={handleChange}
+          required
+        />
+        <TextField
+          name="middlename"
+          label="Middle Name"
+          value={formData.middlename}
           onChange={handleChange}
         />
         <TextField
-          type="text"
-          placeholder="Middle Name" // Corrected placeholder
-          id="middlename"
+          name="lastname"
+          label="Last Name"
+          value={formData.lastname}
           onChange={handleChange}
-        />
-        <TextField
-          type="text"
-          placeholder="Last Name"
-          id="lastname"
-          onChange={handleChange}
+          required
         />
         <Typography variant="body2" sx={{ mb: 5 }}>
           Gender
         </Typography>
         <Select
           label="Gender"
-          value={info.gender}
+          value={formData.gender}
           onChange={(e) =>
-            handleChange({ target: { id: "gender", value: e.target.value } })
+            handleChange({ target: { name: "gender", value: e.target.value } })
           }
           sx={{ mb: 2 }}
         >
@@ -147,25 +156,29 @@ const Register = () => {
         <TextField
           type="text"
           placeholder="Nationality"
-          id="nationality"
+          name="nationality" // Change id to name
+          value={formData.nationality}
           onChange={handleChange}
         />
         <TextField
           type="email"
           placeholder="Email Address"
-          id="email"
+          name="email" // Change id to name
+          value={formData.email}
           onChange={handleChange}
         />
         <TextField
-          type="number"
+          type="text"
           placeholder="Phone Number"
-          id="phone"
+          name="phone" // Change id to name
+          value={formData.phone}
           onChange={handleChange}
         />
         <TextField
           type="text"
           placeholder="Address"
-          id="address"
+          name="address" // Change id to name
+          value={formData.address}
           onChange={handleChange}
         />
         <Typography variant="h6" gutterBottom>
@@ -177,7 +190,7 @@ const Register = () => {
         <FormControlLabel
           control={
             <Checkbox
-              checked={info.courses.includes(
+              checked={formData.courses.includes(
                 "LPG(Cooking Gas) Sales and Management"
               )}
               onChange={handleCourseChange}
@@ -189,7 +202,7 @@ const Register = () => {
         <FormControlLabel
           control={
             <Checkbox
-              checked={info.courses.includes(
+              checked={formData.courses.includes(
                 "Construction and Installation of LPG (cooking gas)"
               )}
               onChange={handleCourseChange}
@@ -201,7 +214,7 @@ const Register = () => {
         <FormControlLabel
           control={
             <Checkbox
-              checked={info.courses.includes(
+              checked={formData.courses.includes(
                 "Oil and Gas Investment/Financial Freedom"
               )}
               onChange={handleCourseChange}
@@ -213,7 +226,7 @@ const Register = () => {
         <FormControlLabel
           control={
             <Checkbox
-              checked={info.courses.includes("Mentorship")}
+              checked={formData.courses.includes("Mentorship")}
               onChange={handleCourseChange}
               name="Mentorship"
             />
@@ -229,7 +242,7 @@ const Register = () => {
         control={<Radio />}
         label="online"
         onChange={(e) =>
-          handleChange({ target: { id: "classType", value: "online" } })
+          handleChange({ target: { name: "classes", value: "online" } })
         }
       />
       <FormControlLabel
@@ -237,7 +250,7 @@ const Register = () => {
         control={<Radio />}
         label="offline"
         onChange={(e) =>
-          handleChange({ target: { id: "classType", value: "offline" } })
+          handleChange({ target: { name: "classes", value: "offline" } })
         }
       />
       <Typography variant="body2" sx={{ mb: 5 }}>
@@ -245,15 +258,15 @@ const Register = () => {
         you to our program and helping you achieve your career goals in the oil
         and gas industry
       </Typography>
-      <LoadingButton
+      <Button
         fullWidth
         size="large"
         type="submit"
+        onClick={handleSubmit}
         style={{ backgroundColor: "red", color: "white" }}
-        onClick={handleClick}
       >
         Register
-      </LoadingButton>
+      </Button>
       <Typography variant="h6" gutterBottom style={{ color: "red" }}>
         Company account details
       </Typography>
@@ -287,6 +300,7 @@ const Register = () => {
           </Button>
         </DialogActions>
       </Dialog>
+      <ToastContainer />
     </>
   );
 };
