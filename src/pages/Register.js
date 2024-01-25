@@ -77,6 +77,7 @@ const Register = () => {
 
       // navigate("/dashboard/admin");
       toast.success("User successfully created");
+      setShowModal(true);
     } catch (err) {
       console.error("Error registering student:", err);
       toast.error("Unable to create user");
