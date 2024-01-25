@@ -13,7 +13,9 @@ const NewsDet = () => {
   const { data, loading, error } = useFetch(`/properties/find/${id}`);
 
   const { datePosted } = data;
-  const formattedDate = new Date(datePosted).toLocaleDateString();
+  const formattedDate = data.datePosted
+    ? new Date(data.datePosted).toLocaleDateString()
+    : null;
   const [showFullContent, setShowFullContent] = useState(false);
 
   useEffect(() => {

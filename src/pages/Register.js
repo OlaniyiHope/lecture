@@ -69,7 +69,7 @@ const Register = () => {
       try {
         // Now, info state is updated, and you can use it for the API call
         await axios.post(
-          "https://safeblog-b04f2f2a940f.herokuapp.com/api/registerschool",
+          "https://safeblog-b04f2f2a940f.herokuapp.com/api/users/register",
           info
         );
         setShowModal(true);
