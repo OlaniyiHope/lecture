@@ -12,7 +12,7 @@ const Home = () => {
           <div
             class="single-slide bg-cover darken-overlay darken-image"
             style={{
-              backgroundImage: 'url("assets/img/build.JPEG")',
+              backgroundImage: 'url("assets/img/build.jpeg")',
               paddingTop: "100px",
             }}
           >
