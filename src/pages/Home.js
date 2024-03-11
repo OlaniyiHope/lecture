@@ -36,20 +36,20 @@ const Home = () => {
                       of gas plant , supply of gas tank etc
                     </p>
                     <a
-                      href="contact.html"
+                      href="/cnotact"
                       class="theme-btn me-sm-4 wow fadeInLeft"
                       data-wow-duration="1.2s"
                       data-wow-delay=".8s"
                     >
-                      contact us
+                      Contact us
                     </a>
                     <a
-                      href="projects.html"
+                      href="/about"
                       class="theme-btn wow fadeInLeft"
                       data-wow-duration="1.2s"
                       data-wow-delay=".6s"
                     >
-                      our portfolio
+                      Project
                     </a>
                   </div>
                 </div>
