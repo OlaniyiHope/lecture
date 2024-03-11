@@ -50,9 +50,6 @@ const Nav = () => {
             </ul>
           </div>
           <div className="header-right-elements d-flex align-items-center justify-content-between">
-            <a href="/sidebar" className="side-menu-toggle d-none d-xl-block">
-              <i className="fal fa-bars"></i>
-            </a>
             <div className="d-inline-block ms-4 d-xl-none">
               <div className="mobile-nav-wrap">
                 <div id="hamburger" onClick={toggleMobileMenu}>
