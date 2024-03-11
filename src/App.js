@@ -18,6 +18,7 @@ import Det from "./pages/Det";
 import News from "./pages/News";
 import NewsDet from "./pages/NewsDet";
 import Contact from "./pages/Contact";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/register" element={<LoginPage />} />
           <Route exact path="/blog" element={<News />} />
+          <Route exact path="/services" element={<Services />} />
 
           <Route exact path="/sidebar" element={<Sidebar />} />
           <Route exact path="" element={<BlogDet />} />
