@@ -3573,7 +3573,7 @@ header .header-top-bar .top-social-icons a:hover {
   position: relative;
   z-index: 1;
   opacity: 0.8;
-  filter: brightness(20%);
+
   overflow: hidden;
 }
 .hero-2 .single-slide::before {

@@ -3573,7 +3573,7 @@ header .header-top-bar .top-social-icons a:hover {
   position: relative;
   z-index: 1;
   opacity: 0.8;
-  filter: brightness(20%);
+
   overflow: hidden;
 }
 .hero-2 .single-slide::before {
@@ -3620,7 +3620,7 @@ header .header-top-bar .top-social-icons a:hover {
 .hero-2 .hero-contents h1 {
   font-size: 95px;
   margin-bottom: 30px;
-  color: #001659;
+  color: #001659 !important;
 }
 @media (max-width: 1191px) {
   .hero-2 .hero-contents h1 {

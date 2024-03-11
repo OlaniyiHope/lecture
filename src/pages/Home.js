@@ -6,62 +6,59 @@ const Home = () => {
   return (
     <div>
       <Nav />
-      <body class="body-wrapper">
-        <div
-          className="page-banner-wrap bg-cover"
-          style={{
-            backgroundImage: 'url("assets/img/27.jpeg")',
-            paddingTop: "200px",
-          }}
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-12 ps-md-5 pe-md-5 col-xxl-7 col-lg-8 col-md-8 col-sm-10">
-                <div className="hero-contents pe-lg-3">
-                  <h1
-                    className="fs-lg wow fadeInLeft animated"
-                    data-wow-duration="1.3s"
-                    style={{ color: "white" }}
-                  >
-                    Serving gas industry
-                  </h1>
-                  <p
-                    className="pe-lg-5 wow fadeInLeft animated"
-                    data-wow-duration="1.3s"
-                    data-wow-delay=".4s"
-                    style={{ color: "white" }}
-                  >
-                    Safe oil and gas is one of the leading companies in Nigeria
-                    that deals with the installation and supply of gas plant LPG
-                  </p>
 
-                  <a
-                    href="/contact"
-                    className="theme-btn me-sm-4 wow fadeInLeft"
-                    data-wow-duration="1.2s"
-                    data-wow-delay=".8s"
-                  >
-                    contact us
-                  </a>
-                  <a
-                    href="about.html"
-                    className="plus-text-btn wow fadeInLeft"
-                    data-wow-duration="1.2s"
-                    data-wow-delay=".6s"
-                  >
-                    <div className="icon">
-                      <i className="fas fa-plus"></i>
-                    </div>
-                    <div className="link-text" style={{ color: "white" }}>
-                      <span>Explore</span> More about Us
-                    </div>
-                  </a>
+      <section class="hero-wrapper hero-2">
+        <div class="owl-carousel owl-theme">
+          <div
+            class="single-slide bg-cover darken-overlay darken-image"
+            style={{
+              backgroundImage: 'url("assets/img/build.jpeg")',
+              paddingTop: "100px",
+            }}
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-12 pe-lg-5 col-xxl-7 col-lg-9">
+                  <div class="hero-contents pe-lg-3">
+                    <h1
+                      class="wow fadeInLeft animated"
+                      data-wow-duration="1.3s"
+                    >
+                      Serving gas industry
+                    </h1>
+                    <p
+                      class="pe-lg-5 wow fadeInLeft animated"
+                      data-wow-duration="1.3s"
+                      data-wow-delay=".4s"
+                    >
+                      Safe oil and gas is one of the leading companies in
+                      Nigeria that deals with the construction and installation
+                      of gas plant , supply of gas tank etc
+                    </p>
+                    <a
+                      href="contact.html"
+                      class="theme-btn me-sm-4 wow fadeInLeft"
+                      data-wow-duration="1.2s"
+                      data-wow-delay=".8s"
+                    >
+                      contact us
+                    </a>
+                    <a
+                      href="projects.html"
+                      class="theme-btn wow fadeInLeft"
+                      data-wow-duration="1.2s"
+                      data-wow-delay=".6s"
+                    >
+                      our portfolio
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </body>
+      </section>
+
       <section className="workp-process-section section-padding mtm-30">
         <div className="container">
           <div className="row">
