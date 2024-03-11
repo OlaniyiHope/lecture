@@ -24,13 +24,9 @@ const Nav = () => {
               <li>
                 <a href="/services">Services</a>
               </li>
+
               <li>
-                <a href="/product">Product</a>
-              </li>
-              <li>
-                <a href="/about">
-                  About <i className="fal fa-plus"></i>
-                </a>
+                <a href="/about">About</a>
                 <ul className="sub-menu">
                   <li>
                     <a href="/about">What we do</a>
@@ -69,22 +65,9 @@ const Nav = () => {
                       <li>
                         <a href="/service">Services</a>
                       </li>
-                      <li>
-                        <a href="/product">product</a>
-                      </li>
 
                       <li>
-                        <a className="has-arrow" href="#">
-                          About
-                        </a>
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="/about">What we do</a>
-                          </li>
-                          <li>
-                            <a href="/team">Our Team</a>
-                          </li>
-                        </ul>
+                        <a href="/about">About</a>
                       </li>
 
                       <li>
