@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import Nav from "./Nav";
-
+import "./home.css";
 const Home = () => {
   return (
     <div>
@@ -10,7 +10,7 @@ const Home = () => {
       <section class="hero-wrapper hero-2">
         <div class="owl-carousel owl-theme">
           <div
-            class="single-slide bg-cover darken-overlay darken-image"
+            class="single-slide bg-cover "
             style={{
               backgroundImage: 'url("assets/img/build.jpeg")',
               paddingTop: "100px",

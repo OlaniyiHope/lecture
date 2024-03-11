@@ -21,3 +21,13 @@
 .darken-image {
   filter: brightness(0.5); /* Adjust the brightness value as needed */
 }
+
+@media only screen and (max-width: 600px) {
+  .single-slide {
+    padding-top: 50px; /* Adjust as needed */
+  }
+  .hero-contents {
+    padding-left: 10px; /* Adjust as needed */
+    padding-right: 10px; /* Adjust as needed */
+  }
+}
