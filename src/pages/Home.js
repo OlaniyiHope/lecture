@@ -10,7 +10,7 @@ const Home = () => {
         <div
           className="page-banner-wrap bg-cover"
           style={{
-            backgroundImage: 'url("assets/img/60.jpg")',
+            backgroundImage: 'url("assets/img/27.jpeg")',
             paddingTop: "200px",
           }}
         >
