@@ -53,7 +53,7 @@ const NewsDet = () => {
       <div
         class="page-banner-wrap bg-cover"
         style={{
-          backgroundImage: 'url("/assets/img/newsafe.png")',
+          backgroundImage: 'url("/assets/img/out.jpg")',
         }}
       >
         <div class="container" style={{ paddingTop: "100px" }}>
