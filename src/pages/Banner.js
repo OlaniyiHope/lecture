@@ -4,7 +4,7 @@ import Nav from "./Nav";
 
 const Banner = () => {
   return (
-    <body class="body-wrapper">
+    <body className="body-wrapper">
       <div
         className="page-banner-wrap bg-cover"
         style={{ backgroundImage: 'url("assets/img/60.jpg")' }}

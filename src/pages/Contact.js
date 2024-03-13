@@ -21,24 +21,24 @@ const Contact = () => {
     <div>
       <Nav />
       <div
-        class="page-banner-wrap bg-cover"
+        className="page-banner-wrap bg-cover"
         style={{
           backgroundImage: 'url("/assets/img/newsafe.png")',
         }}
       >
-        <div class="container" style={{ paddingTop: "100px" }}>
-          <div class="row">
-            <div class="col-12 col-lg-12">
-              <div class="page-heading text-white">
+        <div className="container" style={{ paddingTop: "100px" }}>
+          <div className="row">
+            <div className="col-12 col-lg-12">
+              <div className="page-heading text-white">
                 <h1>Contact Us</h1>
               </div>
-              <div class="breadcrumb-wrap">
+              <div className="breadcrumb-wrap">
                 <nav>
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
+                  <ol className="breadcrumb">
+                    <li className="breadcrumb-item">
                       <a href="/">Home</a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">
+                    <li className="breadcrumb-item active" aria-current="page">
                       Contact
                     </li>
                   </ol>
@@ -49,81 +49,81 @@ const Contact = () => {
         </div>
       </div>
 
-      <div class="contact-us-wrapper section-padding">
-        <div class="container">
-          <div class="row eq-height">
-            <div class="col-lg-8 col-12">
-              <div class="contact-form">
+      <div className="contact-us-wrapper section-padding">
+        <div className="container">
+          <div className="row eq-height">
+            <div className="col-lg-8 col-12">
+              <div className="contact-form">
                 <h2>Get in Touch</h2>
                 <form
                   action="https://rrdevs.net/demos/html/busico/mail.php"
                   method="POST"
-                  class="row"
+                  className="row"
                   id="contact-form"
                 >
-                  <div class="col-md-6 col-12">
-                    <div class="single-personal-info">
+                  <div className="col-md-6 col-12">
+                    <div className="single-personal-info">
                       <input type="text" name="name" placeholder="Name" />
                     </div>
                   </div>
-                  <div class="col-md-6 col-12">
-                    <div class="single-personal-info">
+                  <div className="col-md-6 col-12">
+                    <div className="single-personal-info">
                       <input type="email" name="email" placeholder="Email" />
                     </div>
                   </div>
-                  <div class="col-md-6 col-12">
-                    <div class="single-personal-info">
+                  <div className="col-md-6 col-12">
+                    <div className="single-personal-info">
                       <input type="text" name="phone" placeholder="Number" />
                     </div>
                   </div>
-                  <div class="col-md-6 col-12">
-                    <div class="single-personal-info">
+                  <div className="col-md-6 col-12">
+                    <div className="single-personal-info">
                       <input type="text" name="subject" placeholder="Subject" />
                     </div>
                   </div>
-                  <div class="col-md-12 col-12">
-                    <div class="single-personal-info">
+                  <div className="col-md-12 col-12">
+                    <div className="single-personal-info">
                       <textarea name="message" placeholder="message"></textarea>
                     </div>
                   </div>
-                  <div class="col-md-12 col-12">
+                  <div className="col-md-12 col-12">
                     <input
-                      class="submit-btn"
+                      className="submit-btn"
                       type="submit"
                       value="Submit Now"
                     />
                   </div>
                 </form>
-                <span class="form-message"></span>
+                <span className="form-message"></span>
               </div>
             </div>
-            <div class="col-lg-4 col-12">
-              <div class="contact-us-sidebar mt-5 mt-lg-0">
-                <div class="contact-info">
+            <div className="col-lg-4 col-12">
+              <div className="contact-us-sidebar mt-5 mt-lg-0">
+                <div className="contact-info">
                   <h2>CONTACT INFO</h2>
-                  <div class="single-info">
-                    <div class="icon">
-                      <i class="flaticon-email"></i>
+                  <div className="single-info">
+                    <div className="icon">
+                      <i className="flaticon-email"></i>
                     </div>
-                    <div class="text">
+                    <div className="text">
                       <span>Email Us</span>
                       <h5>info@safeoilandgas.com.ng</h5>
                     </div>
                   </div>
-                  <div class="single-info">
-                    <div class="icon">
-                      <i class="flaticon-phone-call-1"></i>
+                  <div className="single-info">
+                    <div className="icon">
+                      <i className="flaticon-phone-call-1"></i>
                     </div>
-                    <div class="text">
+                    <div className="text">
                       <span>Call Us</span>
                       <h5>+2349134777222</h5>
                     </div>
                   </div>
-                  <div class="single-info">
-                    <div class="icon">
-                      <i class="flaticon-pin"></i>
+                  <div className="single-info">
+                    <div className="icon">
+                      <i className="flaticon-pin"></i>
                     </div>
-                    <div class="text">
+                    <div className="text">
                       <span>Location</span>
                       <h5>
                         i201, i202 Ogba Multipurpose Hall adjacent Sunday

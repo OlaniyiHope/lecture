@@ -4,7 +4,7 @@ import Nav from "./Nav";
 
 const Banner2 = () => {
   return (
-    <body class="body-wrapper">
+    <body clasNames="body-wrapper">
       <section className="hero-wrapper hero-1">
         <div className="hero-slider-active owl-carousel">
           <div

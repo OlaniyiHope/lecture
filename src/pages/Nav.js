@@ -11,7 +11,7 @@ const Nav = () => {
     <header className="header-wrap header-1">
       <div className="container-fluid d-flex justify-content-between align-items-center">
         <div className="logo">
-          <a href="index.html">
+          <a href="/">
             <img src="/assets/img/safe.png" alt="logo" />
           </a>
         </div>
@@ -27,14 +27,6 @@ const Nav = () => {
 
               <li>
                 <a href="/about">About</a>
-                <ul className="sub-menu">
-                  <li>
-                    <a href="/about">What we do</a>
-                  </li>
-                  <li>
-                    <a href="/team">Our Team</a>
-                  </li>
-                </ul>
               </li>
               <li>
                 <a href="/blog">Blog</a>
@@ -58,9 +50,7 @@ const Nav = () => {
                   <nav className="sidebar-nav">
                     <ul className="metismenu" id="mobile-menu">
                       <li>
-                        <a className="has-arrow" href="">
-                          Home
-                        </a>
+                        <a href="/">Home</a>
                       </li>
                       <li>
                         <a href="/service">Services</a>
@@ -81,10 +71,10 @@ const Nav = () => {
                   <div className="action-bar">
                     <a href="mailto:modinatheme@gmail.com">
                       <i className="fal fa-envelope"></i>
-                      safeoilandgasng@gmail.com
+                      safeoilandgaslimited@gmail.com
                     </a>
                     <a href="tel:123-456-7890">
-                      <i className="fal fa-phone"></i>08038763637
+                      <i className="fal fa-phone"></i>09134777222
                     </a>
                     <a href="/contact" className="d-btn theme-btn">
                       Contact Us

@@ -2,17 +2,20 @@ import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import Nav from "./Nav";
 import "./home.css";
+
+import buildImage from "./build.jpeg"; // Import the image
+
 const Home = () => {
   return (
     <div>
       <Nav />
 
       <section class="hero-wrapper hero-2">
-        <div class="owl-carousel owl-theme">
+        <div class=" owl-theme">
           <div
-            class="single-slide bg-cover "
+            class="single-slide bg-cover"
             style={{
-              backgroundImage: 'url("assets/img/build.jpeg")',
+              backgroundImage: `url(${buildImage})`,
               paddingTop: "100px",
             }}
           >
