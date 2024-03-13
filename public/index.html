@@ -35,6 +35,48 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
     <!-- template main style css file -->
     <link rel="stylesheet" href="/style.css" />
+    <script>
+      function generateMetaTags(posts) {
+        posts.forEach((post) => {
+          const metaTitle = document.createElement("meta");
+          metaTitle.setAttribute("property", "og:title");
+          metaTitle.content = post.title;
+
+          const metaDescription = document.createElement("meta");
+          metaDescription.setAttribute("name", "description");
+          metaDescription.content = post.desc1.replace(/(<([^>]+)>)/gi, "");
+
+          const metaImage = document.createElement("meta");
+          metaImage.setAttribute("property", "og:image");
+          metaImage.content = post.photos[0];
+
+          document.head.appendChild(metaTitle);
+          document.head.appendChild(metaDescription);
+          document.head.appendChild(metaImage);
+        });
+      }
+
+      const blogPosts = [
+        {
+          _id: { $oid: "65f173589ecc876fa2b1c53f" },
+          title: "HOW THE OIL&GAS INDUSTRY WORKS",
+          slug: "how-the-oil&gas-industry-works",
+          photos: [
+            "http://res.cloudinary.com/dftygokow/image/upload/v1707475105/upload/cvrtvodwztdw0id1xumd.jpg",
+          ],
+          datePosted: { $date: { $numberLong: "1706313600000" } },
+          authorName: "Oluchi",
+          desc1:
+            "<p>The oil and gas industry is broken down into three segments: upstream, midstream, and downstream.</p><p>Upstream, or exploration and production (E&amp;P) companies, find reservoirs and drill oil and gas wells.</p><p>Midstream companies are responsible for transportation from the wells to refineries.</p><p>Downstream companies are responsible for refining and the sale of the finished products.</p><p>Drilling companies contract their services to E&amp;P companies to extract oil and gas.</p><p>Well-servicing companies conduct related construction and maintenance activities on well sites.</p>",
+          createdAt: { $date: { $numberLong: "1710322520117" } },
+          updatedAt: { $date: { $numberLong: "1710322520117" } },
+          __v: { $numberInt: "0" },
+        },
+        // Add more blog post objects as needed
+      ];
+
+      generateMetaTags(blogPosts);
+    </script>
   </head>
 
   <body>
