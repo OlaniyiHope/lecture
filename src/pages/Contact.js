@@ -6,6 +6,7 @@ import rrll from "./safeimg.jpeg";
 import "./Blog.css";
 import Footer from "./Footer";
 import DOMPurify from "dompurify";
+import NewNav from "./NewNav";
 const Contact = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
@@ -19,7 +20,7 @@ const Contact = () => {
   };
   return (
     <div>
-      <Nav />
+      <NewNav />
       <div
         className="page-banner-wrap bg-cover"
         style={{

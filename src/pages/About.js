@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Nav from "./Nav";
+import NewNav from "./NewNav";
 import Footer from "./Footer";
 
 const About = () => {
   return (
     <div>
-      <Nav />
+      <NewNav />
       <div
         className="page-banner-wrap bg-cover"
         style={{ backgroundImage: 'url("assets/img/60.jpg")' }}

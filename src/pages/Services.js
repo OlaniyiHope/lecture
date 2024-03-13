@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import NewNav from "./NewNav";
 
 const Services = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ const Services = () => {
 
   return (
     <>
-      <Nav />
+      <NewNav />
       <div>
         <div
           class="page-banner-wrap bg-cover"

@@ -6,6 +6,7 @@ import "./Blog.css";
 import Footer from "./Footer";
 import moment from "moment";
 import DOMPurify from "dompurify";
+import NewNav from "./NewNav";
 const News = () => {
   const { data, loading, error } = useFetch("/properties?featured=true");
   console.log("Data:", data); // Log the data object
@@ -23,12 +24,10 @@ const News = () => {
   const handleReadMoreClick = () => {
     setShowFullContent(true);
   };
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
-  if (!data) return <div>No data available</div>;
+
   return (
     <div>
-      <Nav />
+      <NewNav />
       <div
         class="page-banner-wrap bg-cover"
         style={{

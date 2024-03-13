@@ -4,11 +4,12 @@ import Nav from "./Nav";
 import "./home.css";
 
 import buildImage from "./build.jpeg"; // Import the image
+import NewNav from "./NewNav";
 
 const Home = () => {
   return (
     <div>
-      <Nav />
+      <NewNav />
 
       <section class="hero-wrapper hero-2">
         <div class=" owl-theme">
