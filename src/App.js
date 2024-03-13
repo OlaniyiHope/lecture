@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/sidebar" element={<Sidebar />} />
           <Route exact path="" element={<BlogDet />} />
           <Route exact path="/" element={<Det />} />
-          <Route exact path="/news" element={<News />} />
+
           <Route exact path="/singleblog/:id" element={<NewsDet />} />
           <Route exact path="/contact" element={<Contact />} />
         </Routes>

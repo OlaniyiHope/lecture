@@ -6,11 +6,33 @@ import rrll from "./safeimg.jpeg";
 import "./Blog.css";
 import Footer from "./Footer";
 import DOMPurify from "dompurify";
+// const NewsDet = () => {
+//   const location = useLocation();
+//   const id = location.pathname.split("/")[2];
+//   console.log("is this an id", id);
+//   const navigate = useNavigate();
+//   const { data, loading, error } = useFetch(`/properties/find/${id}`);
+
+//   const { datePosted } = data;
+//   const formattedDate = data.datePosted
+//     ? new Date(data.datePosted).toLocaleDateString()
+//     : null;
+//   const [showFullContent, setShowFullContent] = useState(false);
+
+//   useEffect(() => {
+//     if (data && data.title) {
+//       document.title = data.title;
+
+//       // Update the URL with the title
+//       const titleSlug = data.title.toLowerCase().replace(/\s+/g, "-");
+//       navigate(`/singleblog/${titleSlug}`, { replace: true });
+//     }
+//   }, [data, navigate]);
 const NewsDet = () => {
   const location = useLocation();
-  const id = location.pathname.split("/")[2];
+  const slug = location.pathname.split("/")[2];
   const navigate = useNavigate();
-  const { data, loading, error } = useFetch(`/properties/find/${id}`);
+  const { data, loading, error } = useFetch(`/properties/find-by-slug/${slug}`);
 
   const { datePosted } = data;
   const formattedDate = data.datePosted
@@ -21,12 +43,8 @@ const NewsDet = () => {
   useEffect(() => {
     if (data && data.title) {
       document.title = data.title;
-
-      // Update the URL with the title
-      const titleSlug = data.title.toLowerCase().replace(/\s+/g, "-");
-      navigate(`/singleblog/${titleSlug}`, { replace: true });
     }
-  }, [data, navigate]);
+  }, [data]);
 
   return (
     <div>
