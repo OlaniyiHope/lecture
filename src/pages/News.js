@@ -4,16 +4,28 @@ import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
 import "./Blog.css";
 import Footer from "./Footer";
+import moment from "moment";
 import DOMPurify from "dompurify";
 const News = () => {
   const { data, loading, error } = useFetch("/properties?featured=true");
-  const { datePosted } = data;
-  const formattedDate = new Date(datePosted).toLocaleDateString();
+  console.log("Data:", data); // Log the data object
+  // const formattedDate = new Date(datePosted).toLocaleDateString();
+  const formattedDate = data?.datePosted
+    ? new Date(data.datePosted).toLocaleDateString()
+    : null;
   const [showFullContent, setShowFullContent] = useState(false);
+  // const formattedDate = data?.datePosted
+  //   ? new Date(data.datePosted).toLocaleDateString()
+  //   : null;
+
+  console.log("Formatted Date:", formattedDate); // Add console.log here
 
   const handleReadMoreClick = () => {
     setShowFullContent(true);
   };
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  if (!data) return <div>No data available</div>;
   return (
     <div>
       <Nav />
@@ -69,7 +81,10 @@ const News = () => {
                         <div class="post-meta">
                           <span>
                             <i class="fal fa-calendar-alt"></i>
-                            {formattedDate}
+
+                            {item.datePosted
+                              ? new Date(item.datePosted).toLocaleDateString()
+                              : ""}
                           </span>
                         </div>
                         <p>
