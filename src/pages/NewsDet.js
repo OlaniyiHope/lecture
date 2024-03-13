@@ -6,6 +6,7 @@ import rrll from "./safeimg.jpeg";
 import "./Blog.css";
 import Footer from "./Footer";
 import DOMPurify from "dompurify";
+import NewNav from "./NewNav";
 // const NewsDet = () => {
 //   const location = useLocation();
 //   const id = location.pathname.split("/")[2];
@@ -49,7 +50,7 @@ const NewsDet = () => {
 
   return (
     <div>
-      <Nav />
+      <NewNav />
       <div
         class="page-banner-wrap bg-cover"
         style={{
