@@ -34,8 +34,9 @@ const NewsDet = () => {
   const navigate = useNavigate();
   const { data, loading, error } = useFetch(`/properties/find-by-slug/${slug}`);
 
-  const { datePosted } = data;
-  const formattedDate = data.datePosted
+  console.log("this is my own data", data);
+
+  const formattedDate = data?.datePosted
     ? new Date(data.datePosted).toLocaleDateString()
     : null;
   const [showFullContent, setShowFullContent] = useState(false);
@@ -59,7 +60,7 @@ const NewsDet = () => {
           <div class="row">
             <div class="col-12 col-lg-12">
               <div class="page-heading text-white">
-                <h1>{data.title}</h1>
+                <h1>{data?.title}</h1>
               </div>
               <div class="breadcrumb-wrap">
                 <nav>
@@ -94,7 +95,7 @@ const NewsDet = () => {
                     }}
                   ></div>
                   <div class="post-content">
-                    <h2>{data.title}</h2>
+                    <h2>{data?.title}</h2>
                     <div class="post-meta">
                       <span>
                         <i class="fal fa-calendar-alt"></i>
@@ -103,14 +104,14 @@ const NewsDet = () => {
                     </div>
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: DOMPurify.sanitize(data.desc1),
+                        __html: DOMPurify.sanitize(data?.desc1),
                       }}
                     ></p>
 
                     <div class="d-flex justify-content-between align-items-center mt-30">
                       <div class="author-info">
                         <h5>
-                          <a href="#">Posted BY : {data.authorName}</a>
+                          <a href="#">Posted BY : {data?.authorName}</a>
                         </h5>
                       </div>
                     </div>
@@ -170,7 +171,7 @@ const NewsDet = () => {
                         }}
                       ></div>
                       <div class="post-content">
-                        <h5>{data.title}</h5>
+                        <h5>{data?.title}</h5>
                         <div class="post-date">
                           <i class="far fa-calendar-alt"></i>
                           {formattedDate}

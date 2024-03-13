@@ -11,7 +11,7 @@ const useFetch = (url) => {
       setLoading(true);
       try {
         const res = await axios.get(
-          `https://safeapis-322a2f0a554e.herokuapp.com/api${url}`
+          `https://safeapis-65d35d3223a7.herokuapp.com/api${url}`
         );
         setData(res.data);
       } catch (err) {
@@ -26,7 +26,7 @@ const useFetch = (url) => {
     setLoading(true);
     try {
       const res = await axios.get(
-        `https://safeapis-322a2f0a554e.herokuapp.com/api${url}`
+        `https://safeapis-65d35d3223a7.herokuapp.com/api${url}`
       );
       setData(res.data);
     } catch (err) {

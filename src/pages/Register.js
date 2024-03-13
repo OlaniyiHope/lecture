@@ -69,7 +69,7 @@ const Register = () => {
     };
     try {
       await axios.post(
-        `https://safeapis-322a2f0a554e.herokuapp.com/api/auth/school`,
+        `https://safeapis-65d35d3223a7.herokuapp.com/api/auth/school`,
         {
           ...formData,
         }

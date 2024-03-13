@@ -62,7 +62,7 @@ const News = () => {
                       ></div>
                       <div class="post-content">
                         <h2>
-                          <Link to={`/singleblog/${item?._id}`}>
+                          <Link to={`/singleblog/${item?.slug}`}>
                             {item?.title}
                           </Link>
                         </h2>
@@ -97,7 +97,7 @@ const News = () => {
                             </h5>
                           </div>
                           <div class="post-link">
-                            <Link to={`/singleblog/${item?._id}`}>
+                            <Link to={`/singleblog/${item?.slug}`}>
                               <i class="fal fa-arrow-right"></i> Read More
                             </Link>
                           </div>
@@ -191,7 +191,7 @@ const News = () => {
                           ></div>
                           <div class="post-content">
                             <h5>
-                              <Link to={`/singleblog/${item?._id}`}>
+                              <Link to={`/singleblog/${item?.slug}`}>
                                 {item.title}
                               </Link>
                             </h5>

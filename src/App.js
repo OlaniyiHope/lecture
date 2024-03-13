@@ -24,12 +24,12 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/register" element={<LoginPage />} />
           <Route exact path="/blog" element={<News />} />
+          <Route exact path="/singleblog/:slug" element={<NewsDet />} />
           <Route exact path="/services" element={<Services />} />
           <Route exact path="/sidebar" element={<Sidebar />} />
           <Route exact path="" element={<BlogDet />} />
           <Route exact path="/" element={<Det />} />
 
-          <Route exact path="/singleblog/:id" element={<NewsDet />} />
           <Route exact path="/contact" element={<Contact />} />
         </Routes>
       </Router>
