@@ -68,9 +68,12 @@ const Register = () => {
       courses,
     };
     try {
-      await axios.post(`http://localhost:4000/api/auth/school`, {
-        ...formData,
-      });
+      await axios.post(
+        `https://safeschool-253e4e879182.herokuapp.com/api/auth/school`,
+        {
+          ...formData,
+        }
+      );
 
       // navigate("/dashboard/admin");
       toast.success("User successfully created");
