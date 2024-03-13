@@ -11,7 +11,7 @@ const useFetch = (url) => {
       setLoading(true);
       try {
         const res = await axios.get(
-          `https://safeblog-b04f2f2a940f.herokuapp.com/api${url}`
+          `https://safeschool-253e4e879182.herokuapp.com/api${url}`
         );
         setData(res.data);
       } catch (err) {
@@ -26,7 +26,7 @@ const useFetch = (url) => {
     setLoading(true);
     try {
       const res = await axios.get(
-        `https://safeblog-b04f2f2a940f.herokuapp.com/api${url}`
+        `https://safeschool-253e4e879182.herokuapp.com/api${url}`
       );
       setData(res.data);
     } catch (err) {

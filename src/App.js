@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Outlet,
-  createBrowserRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -31,7 +25,6 @@ function App() {
           <Route exact path="/register" element={<LoginPage />} />
           <Route exact path="/blog" element={<News />} />
           <Route exact path="/services" element={<Services />} />
-
           <Route exact path="/sidebar" element={<Sidebar />} />
           <Route exact path="" element={<BlogDet />} />
           <Route exact path="/" element={<Det />} />
