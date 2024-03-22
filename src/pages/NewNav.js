@@ -117,6 +117,21 @@ const NewNav = () => {
                     </a>
                     <a
                       class=" style-white ml-25 d-none d-sm-inline-block"
+                      href="/blog"
+                    >
+                      <Link
+                        to="/register"
+                        style={{
+                          color: "#0c1636",
+                          fontSize: "16px",
+                          fontWeight: "1000",
+                        }}
+                      >
+                        REGISTER
+                      </Link>
+                    </a>
+                    <a
+                      class=" style-white ml-25 d-none d-sm-inline-block"
                       href="/contact"
                     >
                       <Link
@@ -206,6 +221,14 @@ const NewNav = () => {
                       {" "}
                       <Link to="/blog" style={{ color: "#0c1636" }}>
                         Blog
+                      </Link>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      {" "}
+                      <Link to="/register" style={{ color: "#0c1636" }}>
+                        Register
                       </Link>
                     </a>
                   </li>
