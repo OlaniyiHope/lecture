@@ -12,13 +12,13 @@ const About = () => {
         </title>
         <meta
           name="description"
-          content="Learn about Safe Oil and Gas Ltd, a provider of gas plant construction, gas tank supply, and gas product supply services in Nigeria. Discover our mission, vision, and commitment to operational excellence and safety leadership."
+          content="Learn about Safe Oil and Gas Ltd, Oil and Gas Construction Company in Nigeria, a provider of gas plant construction, gas tank supply, and gas product supply services in Nigeria. Discover our mission, vision, and commitment to operational excellence and safety leadership."
         />
         <meta
           name="keywords"
-          content="gas plant construction, gas tank supply, gas product supply, gas plant maintenance, gas plant servicing, pump maintenance, dispenser maintenance, gas equipment maintenance, gas system maintenance, gas facility maintenance, gas plant construction services in Nigeria, gas tank supply in Nigeria, gas plant maintenance in Nigeria, gas supply company in Nigeria"
+          content="Oil and Gas Construction Company in Nigeria, gas plant construction, gas tank supply, gas product supply, gas plant maintenance, gas plant servicing, pump maintenance, dispenser maintenance, gas equipment maintenance, gas system maintenance, gas facility maintenance, gas plant construction services in Nigeria, gas tank supply in Nigeria, gas plant maintenance in Nigeria, gas supply company in Nigeria"
         />
-        <meta name="author" content="Your Company Name" />
+        <meta name="author" content="SAFE OIL AND GAS LIMITED" />
       </Helmet>
       <NewNav />
       <div

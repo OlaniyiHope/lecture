@@ -19,13 +19,13 @@ const Services = () => {
         </title>
         <meta
           name="description"
-          content="Discover our gas plant construction and maintenance services. We specialize in construction, installation, and maintenance of LPG gas plants, bulk gas supply, CGS installation, and gas tank sales."
+          content="Oil and Gas Construction Company in Nigeria, Discover our gas plant construction and maintenance services. We specialize in construction, installation, and maintenance of LPG gas plants, bulk gas supply, CGS installation, and gas tank sales."
         />
         <meta
           name="keywords"
-          content="gas plant construction, gas plant installation, gas plant engineering, LPG plant construction, LPG plant installation, gas tank construction, gas tank installation, gas storage facility construction, gas storage facility installation, LPG supply, bulk gas supply, CGS installation, gas tank sales, gas plant maintenance, gas plant servicing"
+          content="Oil and Gas Construction Company in Nigeria, gas plant construction, gas plant installation, gas plant engineering, LPG plant construction, LPG plant installation, gas tank construction, gas tank installation, gas storage facility construction, gas storage facility installation, LPG supply, bulk gas supply, CGS installation, gas tank sales, gas plant maintenance, gas plant servicing"
         />
-        <meta name="author" content="Your Company Name" />
+        <meta name="author" content="SAFE OIL AND GAS LIMITED" />
       </Helmet>
       <NewNav />
       <div>
