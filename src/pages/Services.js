@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import NewNav from "./NewNav";
+import { Helmet } from "react-helmet";
 
 const Services = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,6 +13,20 @@ const Services = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Gas Plant Construction and Maintenance Services - Safe Oil and Gas Ltd
+        </title>
+        <meta
+          name="description"
+          content="Discover our gas plant construction and maintenance services. We specialize in construction, installation, and maintenance of LPG gas plants, bulk gas supply, CGS installation, and gas tank sales."
+        />
+        <meta
+          name="keywords"
+          content="gas plant construction, gas plant installation, gas plant engineering, LPG plant construction, LPG plant installation, gas tank construction, gas tank installation, gas storage facility construction, gas storage facility installation, LPG supply, bulk gas supply, CGS installation, gas tank sales, gas plant maintenance, gas plant servicing"
+        />
+        <meta name="author" content="Your Company Name" />
+      </Helmet>
       <NewNav />
       <div>
         <div
@@ -58,12 +73,11 @@ const Services = () => {
                 </div>
                 <div class="contents">
                   <h4>
-                    <a href="services-details.html">Architecture</a>
+                    <a href="services-details.html">
+                      Constrution and INstallation of LPG Gas Plant
+                    </a>
                   </h4>
-                  <p>
-                    We commit ourselves to complete all projects within the
-                    timeline set with our honorable clients.
-                  </p>
+                  <p>Constrution and INstallation of LPG Gas Plan.</p>
                 </div>
               </div>
             </div>
@@ -78,12 +92,9 @@ const Services = () => {
                 </div>
                 <div class="contents">
                   <h4>
-                    <a href="services-details.html">Interior Design</a>
+                    <a href="services-details.html">Bulk LPG gas supply</a>
                   </h4>
-                  <p>
-                    We commit ourselves to complete all projects within the
-                    timeline set with our honorable clients.
-                  </p>
+                  <p>Bulk LPG gas supply</p>
                 </div>
               </div>
             </div>
@@ -98,12 +109,9 @@ const Services = () => {
                 </div>
                 <div class="contents">
                   <h4>
-                    <a href="services-details.html">Home Decoration</a>
+                    <a href="services-details.html">CGS Installation</a>
                   </h4>
-                  <p>
-                    We commit ourselves to complete all projects within the
-                    timeline set with our honorable clients.
-                  </p>
+                  <p>CGS Installatio</p>
                 </div>
               </div>
             </div>
@@ -118,52 +126,9 @@ const Services = () => {
                 </div>
                 <div class="contents">
                   <h4>
-                    <a href="services-details.html">Repair & Painting</a>
+                    <a href="services-details.html">Gas tanks sales</a>
                   </h4>
-                  <p>
-                    We commit ourselves to complete all projects within the
-                    timeline set with our honorable clients.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-12 col-lg-4 mt-30">
-              <div class="single-service-box style-1">
-                <div
-                  class="service-bg bg-cover"
-                  // style="background-image: url('assets/img/services/1.jpg')"
-                ></div>
-                <div class="icon">
-                  <i class="flaticon-sketch-1"></i>
-                </div>
-                <div class="contents">
-                  <h4>
-                    <a href="services-details.html">Sketching</a>
-                  </h4>
-                  <p>
-                    We commit ourselves to complete all projects within the
-                    timeline set with our honorable clients.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-12 col-lg-4 mt-30">
-              <div class="single-service-box style-1">
-                <div
-                  class="service-bg bg-cover"
-                  // style="background-image: url('assets/img/services/1.jpg')"
-                ></div>
-                <div class="icon">
-                  <i class="flaticon-sketch"></i>
-                </div>
-                <div class="contents">
-                  <h4>
-                    <a href="services-details.html">Project Planning</a>
-                  </h4>
-                  <p>
-                    We commit ourselves to complete all projects within the
-                    timeline set with our honorable clients.
-                  </p>
+                  <p>as tanks sales</p>
                 </div>
               </div>
             </div>
@@ -179,7 +144,7 @@ const Services = () => {
           <div class="row">
             <div class="col-12 text-center col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ps-xl-0 pe-xl-0">
               <div class="pricing-contents">
-                <h1>We Offer The Renovating Services</h1>
+                <h1>We Offer The Best Construction Services</h1>
                 <div class="btn-wrapper d-flex align-items-end justify-content-center">
                   <a href="contact.html">Contact Us</a>
                   <div class="btn-cta">
@@ -188,7 +153,7 @@ const Services = () => {
                     </div>
                     <div class="content">
                       <span class="text-star">Call for support</span>
-                      <h3>(555) 548 201 520</h3>
+                      <h3>09134777222</h3>
                     </div>
                   </div>
                 </div>
