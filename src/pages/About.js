@@ -1,10 +1,25 @@
 import React, { useEffect, useState } from "react";
 import NewNav from "./NewNav";
 import Footer from "./Footer";
-
+import { Helmet } from "react-helmet";
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>
+          About Safe Oil and Gas Ltd - Providing Gas Plant Construction and
+          Maintenance Services
+        </title>
+        <meta
+          name="description"
+          content="Learn about Safe Oil and Gas Ltd, a provider of gas plant construction, gas tank supply, and gas product supply services in Nigeria. Discover our mission, vision, and commitment to operational excellence and safety leadership."
+        />
+        <meta
+          name="keywords"
+          content="gas plant construction, gas tank supply, gas product supply, gas plant maintenance, gas plant servicing, pump maintenance, dispenser maintenance, gas equipment maintenance, gas system maintenance, gas facility maintenance, gas plant construction services in Nigeria, gas tank supply in Nigeria, gas plant maintenance in Nigeria, gas supply company in Nigeria"
+        />
+        <meta name="author" content="Your Company Name" />
+      </Helmet>
       <NewNav />
       <div
         className="page-banner-wrap bg-cover"
