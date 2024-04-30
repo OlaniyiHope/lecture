@@ -23,7 +23,7 @@ const Services = () => {
         />
         <meta
           name="keywords"
-          content="Oil and Gas Construction Company in Nigeria, gas plant construction in Nigeria, gas plant installation in Nigeria,  gas plant construction, gas plant installation, gas plant engineering, LPG plant construction, LPG plant installation, gas tank construction, gas tank installation, gas storage facility construction, gas storage facility installation, LPG supply, bulk gas supply, CGS installation, gas tank sales, gas plant maintenance, gas plant servicing"
+          content="Oil and Gas Construction Company in Nigeria, gas plant construction in Nigeria, gas plant installation in Nigeria,  gas plant construction, gas plant installation, gas plant engineering, LPG plant construction in Nigeria, LPG plant installation, gas tank construction, gas tank installation, gas storage facility construction, gas storage facility installation, LPG supply, bulk gas supply, CGS installation, gas tank sales, gas plant maintenance, gas plant servicing"
         />
         <meta name="author" content="SAFE OIL AND GAS LIMITED" />
       </Helmet>
