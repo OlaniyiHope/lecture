@@ -28,7 +28,6 @@ function App() {
           <Route exact path="/services" element={<Services />} />
           <Route exact path="/sidebar" element={<Sidebar />} />
           <Route exact path="" element={<BlogDet />} />
-          <Route exact path="/" element={<Det />} />
 
           <Route exact path="/contact" element={<Contact />} />
         </Routes>
