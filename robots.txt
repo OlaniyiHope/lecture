@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /           # Allow all crawlers to access the entire site
+
+Sitemap: https://www.safeoilandgas.com.ng/sitemap.xml   # Reference to your sitemap file
