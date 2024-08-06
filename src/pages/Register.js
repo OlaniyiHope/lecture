@@ -68,12 +68,9 @@ const Register = () => {
       courses,
     };
     try {
-      await axios.post(
-        `https://safeapis-65d35d3223a7.herokuapp.com/api/auth/school`,
-        {
-          ...formData,
-        }
-      );
+      await axios.post(`https://ogaposapi.vercel.app/api/registerschool`, {
+        ...formData,
+      });
 
       // navigate("/dashboard/admin");
       toast.success("User successfully created");
